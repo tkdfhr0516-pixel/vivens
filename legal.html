@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vivens Asset Management Partners - 조세·상속·기업법률 서비스</title>
+  <style>
+    body { margin: 0; font-family: "Noto Sans KR", Arial, sans-serif; background-color: #ffffff; color: #222; line-height: 1.7; }
+    nav { position: fixed; top: 0; left: 0; right: 0; background: #1e293b; border-bottom: 1px solid #334155; z-index: 1000; padding: 15px 20px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+    nav a { color: #e2e8f0; text-decoration: none; font-weight: 600; margin: 0 20px; font-size: 17px; transition: color 0.3s; }
+    nav a:hover, nav a.active { color: #93c5fd; }
+    nav a.active { border-bottom: 3px solid #93c5fd; padding-bottom: 5px; }
+    .hero { position: relative; background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.68)), url("https://www.shutterstock.com/image-photo/male-client-receiving-legal-advice-600nw-2698258241.jpg"); background-size: cover; background-position: center 35%; background-attachment: fixed; color: #fff; padding: 220px 20px 140px; text-align: center; min-height: 65vh; display: flex; flex-direction: column; justify-content: center; }
+    .hero::before { content: ''; position: absolute; top:0; left:0; right:0; bottom:0; background: inherit; z-index: 1; }
+    .hero > * { position: relative; z-index: 2; }
+    .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
+    .hero .subtitle { font-size: 22px; margin-bottom: 40px; font-weight: 400; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
+    .hero .intro { max-width: 800px; margin: 0 auto; font-size: 18px; line-height: 1.8; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
+    section { max-width: 1150px; margin: 0 auto; padding: 100px 20px 90px; }
+    section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; font-weight: 600; color: #1a1a1a; }
+    .highlight-box { background: #f8f9fc; border-radius: 12px; padding: 40px 30px; margin-bottom: 60px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+    .highlight-box h2 { font-size: 32px; margin-bottom: 20px; color: #1a1a1a; }
+    .highlight-box p { font-size: 18px; color: #444; margin-bottom: 40px; }
+    .benefits { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .benefit-item { flex: 1; min-width: 280px; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); transition: transform 0.3s; }
+    .benefit-item:hover { transform: translateY(-10px); }
+    .benefit-item h3 { font-size: 20px; margin-bottom: 12px; color: #2c5282; }
+    .benefit-item p { font-size: 15px; color: #555; }
+    .service-grid { display: grid; gap: 20px; max-width: 900px; margin: 0 auto; }
+    .service-item { border: 1px solid #e3e6eb; border-radius: 12px; overflow: hidden; background-color: #fff; box-shadow: 0 6px 20px rgba(0,0,0,0.06); transition: all 0.3s ease; }
+    .service-item:hover { box-shadow: 0 12px 32px rgba(0,0,0,0.12); transform: translateY(-2px); }
+    .service-title { cursor: pointer; padding: 24px 28px; font-size: 18px; font-weight: 500; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%); user-select: none; transition: all 0.2s ease; }
+    .service-title:hover { background: linear-gradient(135deg, #eef2f8 0%, #f8f9fc 100%); }
+    .service-title span { font-size: 22px; font-weight: 300; transition: transform 0.2s ease; min-width: 24px; text-align: center; }
+    .service-content { display: none; padding: 0 28px 28px; font-size: 15.5px; color: #444; line-height: 1.75; }
+    .service-item:first-child .service-content { display: block; }
+    .service-item:first-child .service-title span { transform: rotate(180deg); }
+    footer { background: #1e293b; color: #e2e8f0; font-size: 14px; padding: 60px 20px 40px; text-align: center; line-height: 1.8; border-top: 1px solid #334155; }
+    .contact-info { margin-bottom: 30px; font-size: 16px; }
+    .contact-info a { color: #93c5fd; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .contact-info a:hover { color: #bfdbfe; }
+    .address { max-width: 800px; margin: 0 auto 20px; opacity: 0.9; }
+    .business-info { font-size: 13px; opacity: 0.85; }
+    @media (max-width: 768px) { nav { padding: 12px 10px; } nav a { margin: 0 10px; font-size: 15px; } .hero { padding: 160px 20px 100px; background-attachment: scroll; } .hero h1 { font-size: 38px; } .hero .subtitle { font-size: 20px; } section h2 { font-size: 30px; } .highlight-box { padding: 30px 20px; } .benefits { flex-direction: column; gap: 20px; } .service-title { padding: 20px 24px; font-size: 17px; } }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">회사소개</a>
+    <a href="financial.html">기업금융 및 경영 컨설팅</a>
+    <a href="realestate.html">부동산 종합자산관리 서비스</a>
+    <a href="legal.html" class="active">조세·상속·기업법률 서비스</a>
+    <a href="vvip.html">VVIP서비스</a>
+  </nav>
+
+  <div class="hero">
+    <h1>조세·상속·기업법률 서비스</h1>
+    <div class="subtitle">자산 보호와 절세를 위한 전문 법률·세무 지원</div>
+    <div class="intro">
+      증여·상속·조세심판부터 법인 해산·청산, 일상 법률 자문 및 인허가까지<br>
+      기업과 개인의 법적 리스크를 최소화하는 종합 솔루션을 제공합니다.
+    </div>
+  </div>
+
+  <section style="padding-top: 40px; background: #f8f9fc; padding-bottom: 60px;">
+    <div class="highlight-box">
+      <h2>법률·세무 리스크를 완벽히 관리합니다</h2>
+      <p>상속·증여·조세부터 기업법률·행정 자문까지 – 모든 상황에 최적의 법적 솔루션을 제시합니다.</p>
+      <div class="benefits">
+        <div class="benefit-item">
+          <h3>✔ 세금 최소화</h3>
+          <p>합법적 절세 전략으로 부담 경감</p>
+        </div>
+        <div class="benefit-item">
+          <h3>✔ 리스크 사전 차단</h3>
+          <p>상속·증여·소송 리스크 예방</p>
+        </div>
+        <div class="benefit-item">
+          <h3>✔ 원스톱 자문</h3>
+          <p>법률·세무·행정 통합 지원</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>주요 서비스</h2>
+    <div class="service-grid">
+      <div class="service-item">
+        <div class="service-title" onclick="toggleService(this)">
+          1. 증여, 상속 및 조세심판청구 등의 절세전략 <span>−</span>
+        </div>
+        <div class="service-content">
+          상속·증여 과정에서 발생하는 세부담을 최소화하기 위한 최적화 전략을 수립합니다.<br>
+          증여·상속세 절세 방안, 가족 내 지분 이전 계획, 조세심판청구 대리, 세무조사 대응 등을 통해 합법적·효율적인 세금 절감 솔루션을 제공합니다.<br>
+          개인·법인 모두에게 맞춤형 장기 절세 플랜과 정기 세무 리뷰 서비스를 지원합니다.
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-title" onclick="toggleService(this)">
+          2. 법인의 해산 및 청산 <span>+</span>
+        </div>
+        <div class="service-content">
+          법인 해산·청산 절차를 안전하고 효율적으로 진행합니다.<br>
+          해산 결의, 청산인 선임, 채권자 보호 절차, 잔여재산 분배, 세무 신고·말소 등 전 과정을 대행하며, 법률·세무 리스크를 최소화합니다.<br>
+          해산 후 개인 자산 이전 시 절세 방안까지 함께 검토합니다.
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-title" onclick="toggleService(this)">
+          3. 일상의 통합 법률 자문과 사업인허가 및 행정관련 실정법 자문 <span>+</span>
+        </div>
+        <div class="service-content">
+          일상적인 법률 문제부터 사업 운영에 필요한 모든 법적 자문을 통합적으로 제공합니다.<br>
+          계약서 검토·작성, 인허가·행정 절차 대행, 노동·상거래·지식재산권 분쟁 대응, 규제 준수 점검 등을 통해 법적 리스크를 사전에 차단합니다.<br>
+          정기 법률 리뷰와 긴급 자문 핫라인을 운영하여 언제든 안심하고 사업할 수 있도록 지원합니다.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="contact-info">
+      <a href="tel:15331011">Tel. 1533-1011</a> |
+      <a href="mailto:vivensasset@naver.com">E-mail. vivensasset@naver.com</a>
+    </div>
+    <div class="address">
+      Gyeongsang Branch: 1003, 20, Seoseong-ro, Jung-gu, Daegu, 41933 Korea
+    </div>
+    <div class="business-info">
+      Business Registration No. 803-86-03360
+    </div>
+  </footer>
+
+  <script>
+    function toggleService(element) {
+      const content = element.nextElementSibling;
+      const sign = element.querySelector("span");
+      if (content.style.display === "block") {
+        content.style.display = "none";
+        sign.textContent = "+";
+        sign.style.transform = "rotate(0deg)";
+      } else {
+        content.style.display = "block";
+        sign.textContent = "−";
+        sign.style.transform = "rotate(180deg)";
+      }
+    }
+  </script>
+</body>
+</html>

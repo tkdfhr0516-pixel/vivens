@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vivens Asset Management Partners - VVIP서비스</title>
+  <style>
+    body { margin: 0; font-family: "Noto Sans KR", Arial, sans-serif; background-color: #ffffff; color: #222; line-height: 1.7; }
+    nav { position: fixed; top: 0; left: 0; right: 0; background: #1e293b; border-bottom: 1px solid #334155; z-index: 1000; padding: 15px 20px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+    nav a { color: #e2e8f0; text-decoration: none; font-weight: 600; margin: 0 20px; font-size: 17px; transition: color 0.3s; }
+    nav a:hover, nav a.active { color: #93c5fd; }
+    nav a.active { border-bottom: 3px solid #93c5fd; padding-bottom: 5px; }
+    .hero { position: relative; background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.68)), url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600"); background-size: cover; background-position: center 35%; background-attachment: fixed; color: #fff; padding: 220px 20px 140px; text-align: center; min-height: 65vh; display: flex; flex-direction: column; justify-content: center; }
+    .hero::before { content: ''; position: absolute; top:0; left:0; right:0; bottom:0; background: inherit; z-index: 1; }
+    .hero > * { position: relative; z-index: 2; }
+    .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
+    .hero .subtitle { font-size: 22px; margin-bottom: 40px; font-weight: 400; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
+    .hero .intro { max-width: 800px; margin: 0 auto; font-size: 18px; line-height: 1.8; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
+    section { max-width: 1150px; margin: 0 auto; padding: 100px 20px 90px; }
+    section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; font-weight: 600; color: #1a1a1a; }
+    .highlight-box { background: #f8f9fc; border-radius: 12px; padding: 40px 30px; margin-bottom: 60px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+    .highlight-box h2 { font-size: 32px; margin-bottom: 20px; color: #1a1a1a; }
+    .highlight-box p { font-size: 18px; color: #444; margin-bottom: 40px; }
+    .benefits { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .benefit-item { flex: 1; min-width: 280px; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); transition: transform 0.3s; }
+    .benefit-item:hover { transform: translateY(-10px); }
+    .benefit-item h3 { font-size: 20px; margin-bottom: 12px; color: #2c5282; }
+    .benefit-item p { font-size: 15px; color: #555; }
+    .vvip-services { 
+      display: grid; 
+      grid-template-columns: repeat(4, 1fr);  /* 데스크톱: 항상 4개 한 줄 */
+      gap: 30px; 
+    }
+    .vvip-card { background: #f8f9fc; border-radius: 12px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); transition: all 0.3s; text-align: center; }
+    .vvip-card:hover { transform: translateY(-8px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
+    .vvip-card .icon { font-size: 40px; margin-bottom: 15px; color: #2c5282; }
+    .vvip-card h3 { font-size: 22px; margin-bottom: 15px; color: #1a1a1a; }
+    .vvip-card p { font-size: 15px; color: #555; line-height: 1.6; }
+    footer { background: #1e293b; color: #e2e8f0; font-size: 14px; padding: 60px 20px 40px; text-align: center; line-height: 1.8; border-top: 1px solid #334155; }
+    .contact-info { margin-bottom: 30px; font-size: 16px; }
+    .contact-info a { color: #93c5fd; text-decoration: none; font-weight: 500; transition: color 0.2s; }
+    .contact-info a:hover { color: #bfdbfe; }
+    .address { max-width: 800px; margin: 0 auto 20px; opacity: 0.9; }
+    .business-info { font-size: 13px; opacity: 0.85; }
+    @media (max-width: 1200px) {
+      .vvip-services { grid-template-columns: repeat(2, 1fr); }  /* 1200px 이하 → 2개씩 */
+    }
+    @media (max-width: 768px) {
+      nav { padding: 12px 10px; } nav a { margin: 0 10px; font-size: 15px; }
+      .hero { padding: 160px 20px 100px; background-attachment: scroll; }
+      .hero h1 { font-size: 38px; } .hero .subtitle { font-size: 20px; }
+      section h2 { font-size: 30px; } .highlight-box { padding: 30px 20px; }
+      .benefits { flex-direction: column; gap: 20px; }
+      .vvip-services { grid-template-columns: 1fr; }  /* 모바일 → 1개씩 */
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="index.html">회사소개</a>
+    <a href="financial.html">기업금융 및 경영 컨설팅</a>
+    <a href="realestate.html">부동산 종합자산관리 서비스</a>
+    <a href="legal.html">조세·상속·기업법률 서비스</a>
+    <a href="vvip.html" class="active">VVIP서비스</a>
+  </nav>
+
+  <div class="hero">
+    <h1>VVIP서비스</h1>
+    <div class="subtitle">고액 자산가 전용 프리미엄 맞춤 관리</div>
+    <div class="intro">
+      초고액 자산가를 위한 1:1 전담 팀 운영과 프라이빗 서비스,<br>
+      보안·자산 보호·독점 기회까지 최고 수준의 프리미엄 지원을 제공합니다.
+    </div>
+  </div>
+
+  <section style="padding-top: 40px; background: #f8f9fc; padding-bottom: 60px;">
+    <div class="highlight-box">
+      <h2>최고 수준의 프라이빗 자산 관리를 경험하세요</h2>
+      <p>VVIP 전용 전담팀이 24시간 밀착 지원하며, 보안부터 투자·상속까지 모든 것을 책임집니다.</p>
+      <div class="benefits">
+        <div class="benefit-item">
+          <h3>✔ 1:1 전담 팀</h3>
+          <p>전문가 그룹이 고객만을 위해 움직입니다</p>
+        </div>
+        <div class="benefit-item">
+          <h3>✔ 철저한 보안</h3>
+          <p>VVIP 전용 보안 시스템으로 자산 보호</p>
+        </div>
+        <div class="benefit-item">
+          <h3>✔ 독점 기회</h3>
+          <p>일반 고객에게는 없는 프리미엄 투자·네트워크 제공</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>VVIP 전용 프리미엄 서비스</h2>
+    <div class="vvip-services">
+      <div class="vvip-card">
+        <div class="icon">🔒</div>
+        <h3>철저한 자산 보호와 프라이버시 보장</h3>
+        <p>24시간 밀착 보안 시스템과 최고 수준의 기밀 유지 계약으로 자산과 개인정보를 완벽히 보호합니다.</p>
+      </div>
+
+      <div class="vvip-card">
+        <div class="icon">📈</div>
+        <h3>맞춤형 투자 기회와 글로벌 네트워크</h3>
+        <p>프라이빗 에쿼티·특수 자산 등 독점 투자 기회와 글로벌 VIP 네트워크를 제공합니다.</p>
+      </div>
+
+      <div class="vvip-card">
+        <div class="icon">👨‍👩‍👧‍👦</div>
+        <h3>통합 상속·증여·세무 플랜</h3>
+        <p>세대 간 자산 이전 시 세부담 최소화와 안정적인 승계를 위한 전문 통합 전략을 지원합니다.</p>
+      </div>
+
+      <div class="vvip-card">
+        <div class="icon">⏰</div>
+        <h3>24시간 전담 지원 및 라이프 케어</h3>
+        <p>전담 컨시어지와 VIP 핫라인으로 생활·여행·의료 등 모든 니즈를 실시간으로 해결합니다.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="contact-info">
+      <a href="tel:15331011">Tel. 1533-1011</a> |
+      <a href="mailto:vivensasset@naver.com">E-mail. vivensasset@naver.com</a>
+    </div>
+    <div class="address">
+      Gyeongsang Branch: 1003, 20, Seoseong-ro, Jung-gu, Daegu, 41933 Korea
+    </div>
+    <div class="business-info">
+      Business Registration No. 803-86-03360
+    </div>
+  </footer>
+</body>
+</html>

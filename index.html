@@ -1,163 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vivens Asset Management Partners - Company Overview</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vivens Asset Management Partners - Company Overview</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: "Noto Sans KR", Arial, sans-serif;
-      background-color: #ffffff;
-      color: #222;
-      line-height: 1.7;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: "Noto Sans KR", Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.8;
+}
 
-    /* NAV */
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: #1e293b;
-      border-bottom: 1px solid #334155;
-      z-index: 1000;
-      padding: 15px 20px;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    }
+/* NAV */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #1e293b;
+  padding: 15px 20px;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
 
-    nav a {
-      color: #e2e8f0;
-      text-decoration: none;
-      font-weight: 600;
-      margin: 0 18px;
-      font-size: 16px;
-    }
+nav a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 600;
+  margin: 0 18px;
+  font-size: 16px;
+}
 
-    nav a:hover,
-    nav a.active {
-      color: #93c5fd;
-    }
+nav a.active, nav a:hover {
+  color: #93c5fd;
+  border-bottom: 3px solid #93c5fd;
+  padding-bottom: 4px;
+}
 
-    nav a.active {
-      border-bottom: 3px solid #93c5fd;
-      padding-bottom: 5px;
-    }
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+  url("https://www.shutterstock.com/image-photo/two-professional-businessmen-shake-hands-600nw-2685764993.jpg");
+  background-size: cover;
+  background-position: center 35%;
+  background-attachment: fixed;
+  color: white;
+  padding: 240px 20px 160px;
+  text-align: center;
+}
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
-        url("https://www.shutterstock.com/image-photo/two-professional-businessmen-shake-hands-600nw-2685764993.jpg");
-      background-size: cover;
-      background-position: center 35%;
-      background-attachment: fixed;
-      color: #fff;
-      padding: 240px 20px 160px;
-      text-align: center;
-      min-height: 70vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+.hero h1 {
+  font-size: 52px;
+  margin-bottom: 20px;
+}
 
-    .hero h1 { font-size: 52px; margin-bottom: 20px; }
-    .hero .subtitle { font-size: 24px; margin-bottom: 40px; }
-    .hero .intro { max-width: 900px; margin: 0 auto 45px; font-size: 19px; }
+.hero .subtitle {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
 
-    .cta-buttons {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 18px;
-    }
+.hero .intro {
+  max-width: 900px;
+  margin: 0 auto 45px;
+  font-size: 19px;
+}
 
-    .cta-btn {
-      background: #3b82f6;
-      color: white;
-      padding: 16px 42px;
-      font-size: 18px;
-      font-weight: 600;
-      border-radius: 8px;
-      text-decoration: none;
-    }
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
 
-    .hero-phone {
-      font-size: 22px;
-      font-weight: 700;
-    }
+.cta-btn {
+  background: #3b82f6;
+  color: white;
+  padding: 16px 42px;
+  font-size: 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
 
-    .hero-phone a {
-      color: #93c5fd;
-      text-decoration: none;
-    }
+.hero-phone {
+  font-size: 22px;
+  font-weight: 700;
+}
 
-    section {
-      max-width: 1150px;
-      margin: 0 auto;
-      padding: 100px 20px;
-    }
+.hero-phone a {
+  color: #93c5fd;
+  text-decoration: none;
+}
 
-    h2 {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 40px;
-    }
+/* COMMON SECTION */
+section {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
 
-    .highlight-box {
-      background: #f8f9fc;
-      border-radius: 12px;
-      padding: 50px;
-      margin-bottom: 80px;
-      text-align: center;
-    }
+h2 {
+  text-align: center;
+  font-size: 38px;
+  margin-bottom: 40px;
+}
 
-    .strengths {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
-    }
+/* HIGHLIGHT */
+.highlight-box {
+  background: #f8f9fc;
+  padding: 60px;
+  border-radius: 12px;
+  text-align: center;
+}
 
-    .strength-item {
-      background: white;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    }
+.strengths {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
 
-    /* SUCCESS STORIES */
-    .case-study {
-      background: #ffffff;
-      padding: 60px 0;
-      border-bottom: 1px solid #eee;
-    }
+.strength-item {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
 
-    .case-study h3 {
-      font-size: 26px;
-      color: #1e293b;
-      margin-bottom: 15px;
-    }
+/* COMPANY INTRO */
+.company-intro {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 17px;
+  color: #444;
+}
 
-    .case-study p {
-      max-width: 900px;
-      margin: 0 auto 15px;
-      color: #444;
-      font-size: 16px;
-    }
+/* SUCCESS STORIES */
+.case-study {
+  border-top: 1px solid #eee;
+  padding: 60px 0;
+}
 
-    footer {
-      background: #1e293b;
-      color: #e2e8f0;
-      padding: 60px 20px;
-      text-align: center;
-    }
+.case-study h3 {
+  font-size: 26px;
+  color: #1e293b;
+}
 
-    @media (max-width: 768px) {
-      .strengths { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 38px; }
-    }
-  </style>
+.related {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #555;
+}
+
+.related span {
+  color: #2c5282;
+  font-weight: 600;
+}
+
+/* FOOTER */
+footer {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+@media(max-width:768px){
+  .strengths { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 38px; }
+}
+</style>
 </head>
 
 <body>
@@ -174,7 +190,7 @@
   <h1>Vivens Asset Management Partners</h1>
   <div class="subtitle">Building Trust and Expertise for Your Future</div>
   <div class="intro">
-    We focus on long-term stability and risk minimization rather than short-term gains,
+    We focus on long-term stability and risk minimization rather than short-term gains,<br>
     supporting the entire lifecycle of your assets.
   </div>
   <div class="cta-buttons">
@@ -183,55 +199,70 @@
   </div>
 </div>
 
+<section style="background:#f8f9fc;">
+  <div class="highlight-box">
+    <h2>Your Reliable Partner for Growth</h2>
+    <p>From entrepreneurship to legacy planning, we stand by you at every moment.</p>
+
+    <div class="strengths">
+      <div class="strength-item">One-Stop Integrated Solution</div>
+      <div class="strength-item">Expert Crisis Management</div>
+      <div class="strength-item">Long-term Partnership</div>
+      <div class="strength-item">VVIP Premium Care</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Company Overview</h2>
+  <div class="company-intro">
+    <p>Vivens Asset Management Partners is a professional integrated asset management consulting firm headquartered in Daegu.</p>
+    <p>We believe asset planning is not about numbers, but about people, responsibility, and continuity.</p>
+    <p>Our role is to design structures that protect wealth, family harmony, and business sustainability.</p>
+  </div>
+</section>
+
+<!-- SUCCESS STORIES -->
 <section>
   <h2>Success Stories</h2>
 
   <div class="case-study">
     <h3>M&A Strategy for Corporate Growth</h3>
-    <p>A mid-sized company facing growth limitations pursued expansion through a strategic acquisition.</p>
-    <p>Vivens Asset identified suitable acquisition targets aligned with long-term objectives.</p>
-    <p>Comprehensive due diligence and valuation analysis were conducted.</p>
-    <p>A balanced transaction structure minimized financial and tax risks.</p>
-    <p>The acquisition successfully expanded the company’s business portfolio and growth potential.</p>
+    <p>A mid-sized company achieved expansion through strategic acquisition.</p>
+    <div class="related">
+      <span>Related Services:</span> M&A Advisory · Corporate Restructuring · Financial Strategy
+    </div>
   </div>
 
   <div class="case-study">
     <h3>Gift, Inheritance & Family Business Succession</h3>
-    <p>A family-owned enterprise sought a smooth generational transition with minimized tax exposure.</p>
-    <p>Asset, ownership, and family structures were comprehensively analyzed.</p>
-    <p>A phased gift and inheritance strategy was implemented.</p>
-    <p>Governance stability and ownership control were preserved.</p>
-    <p>The business achieved a sustainable multi-generational succession framework.</p>
+    <p>A family enterprise completed smooth generational transition with minimized tax burden.</p>
+    <div class="related">
+      <span>Related Services:</span> Gift & Inheritance Planning · Family Business Succession · Tax Advisory
+    </div>
   </div>
 
   <div class="case-study">
-    <h3>Financial Investment Asset Risk Management Solution</h3>
-    <p>A high-net-worth individual held a diversified yet risk-concentrated investment portfolio.</p>
-    <p>Vivens Asset conducted a full risk assessment across asset classes.</p>
-    <p>Portfolio rebalancing reduced volatility and concentration risk.</p>
-    <p>Long-term stability replaced short-term return dependency.</p>
-    <p>The client achieved improved asset resilience amid market fluctuations.</p>
+    <h3>Financial Investment Asset Risk Management</h3>
+    <p>Portfolio risk concentration was reduced through strategic restructuring.</p>
+    <div class="related">
+      <span>Related Services:</span> Investment Risk Management · Portfolio Structuring · Wealth Preservation
+    </div>
   </div>
 
   <div class="case-study">
     <h3>Real Estate Asset Liquidity Solution</h3>
-    <p>A corporation owned valuable real estate assets with limited liquidity.</p>
-    <p>Vivens Asset analyzed asset value and utilization efficiency.</p>
-    <p>Multiple liquidity options were evaluated, including sales and structured financing.</p>
-    <p>A tailored liquidity strategy improved cash flow without compromising asset value.</p>
-    <p>Real estate assets were repositioned as flexible financial resources.</p>
+    <p>Illiquid real estate assets were converted into flexible financial resources.</p>
+    <div class="related">
+      <span>Related Services:</span> Real Estate Asset Management · Liquidity Structuring · Investment Advisory
+    </div>
   </div>
 
 </section>
 
 <footer>
-  <div>📞 Tel. 1533-1011 | ✉️ vivensasset@naver.com</div>
-  <div style="margin-top:15px;">
-    Gyeongsang Branch: 1003, 20, Seoseong-ro, Jung-gu, Daegu, 41933 Korea
-  </div>
-  <div style="margin-top:10px; font-size:13px;">
-    Business Registration No. 803-86-03360
-  </div>
+  <div>📞 1533-1011 | ✉️ vivensasset@naver.com</div>
+  <div>Daegu, Korea</div>
 </footer>
 
 </body>

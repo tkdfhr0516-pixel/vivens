@@ -3,151 +3,161 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vivens Asset Management Partners - Tax, Inheritance & Corporate Legal Services</title>
+  <title>Vivens Asset Management Partners - Comprehensive Real Estate Asset Management</title>
   <style>
     body { margin: 0; font-family: "Noto Sans KR", Arial, sans-serif; background-color: #ffffff; color: #222; line-height: 1.7; }
     nav { position: fixed; top: 0; left: 0; right: 0; background: #1e293b; border-bottom: 1px solid #334155; z-index: 1000; padding: 15px 20px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
     nav a { color: #e2e8f0; text-decoration: none; font-weight: 600; margin: 0 20px; font-size: 17px; transition: color 0.3s; }
     nav a:hover, nav a.active { color: #93c5fd; }
     nav a.active { border-bottom: 3px solid #93c5fd; padding-bottom: 5px; }
-    .hero { position: relative; background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.68)), url("https://www.shutterstock.com/image-photo/male-client-receiving-legal-advice-600nw-2698258241.jpg"); background-size: cover; background-position: center 35%; background-attachment: fixed; color: #fff; padding: 220px 20px 140px; text-align: center; min-height: 65vh; display: flex; flex-direction: column; justify-content: center; }
-    .hero::before { content: ''; position: absolute; top:0; left:0; right:0; bottom:0; background: inherit; z-index: 1; }
+
+    .hero { position: relative; background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.68)), url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600"); background-size: cover; background-position: center 35%; background-attachment: fixed; color: #fff; padding: 220px 20px 140px; text-align: center; min-height: 65vh; display: flex; flex-direction: column; justify-content: center; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: inherit; z-index: 1; }
     .hero > * { position: relative; z-index: 2; }
     .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
     .hero .subtitle { font-size: 22px; margin-bottom: 40px; font-weight: 400; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
     .hero .intro { max-width: 800px; margin: 0 auto; font-size: 18px; line-height: 1.8; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
+
     section { max-width: 1150px; margin: 0 auto; padding: 100px 20px 90px; }
     section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; font-weight: 600; color: #1a1a1a; }
+
     .highlight-box { background: #f8f9fc; border-radius: 12px; padding: 40px 30px; margin-bottom: 60px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-    .highlight-box h2 { font-size: 32px; margin-bottom: 20px; color: #1a1a1a; }
+    .highlight-box h2 { font-size: 32px; margin-bottom: 20px; }
     .highlight-box p { font-size: 18px; color: #444; margin-bottom: 40px; }
+
     .benefits { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
     .benefit-item { flex: 1; min-width: 280px; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); transition: transform 0.3s; }
     .benefit-item:hover { transform: translateY(-10px); }
     .benefit-item h3 { font-size: 20px; margin-bottom: 12px; color: #2c5282; }
     .benefit-item p { font-size: 15px; color: #555; }
+
     .service-grid { display: grid; gap: 20px; max-width: 900px; margin: 0 auto; }
     .service-item { border: 1px solid #e3e6eb; border-radius: 12px; overflow: hidden; background-color: #fff; box-shadow: 0 6px 20px rgba(0,0,0,0.06); transition: all 0.3s ease; }
     .service-item:hover { box-shadow: 0 12px 32px rgba(0,0,0,0.12); transform: translateY(-2px); }
-    .service-title { cursor: pointer; padding: 24px 28px; font-size: 18px; font-weight: 500; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%); user-select: none; transition: all 0.2s ease; }
-    .service-title:hover { background: linear-gradient(135deg, #eef2f8 0%, #f8f9fc 100%); }
-    .service-title span { font-size: 22px; font-weight: 300; transition: transform 0.2s ease; min-width: 24px; text-align: center; }
+    .service-title { cursor: pointer; padding: 24px 28px; font-size: 18px; font-weight: 500; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%); }
+    .service-title span { font-size: 22px; font-weight: 300; }
     .service-content { display: none; padding: 0 28px 28px; font-size: 15.5px; color: #444; line-height: 1.75; }
     .service-item:first-child .service-content { display: block; }
     .service-item:first-child .service-title span { transform: rotate(180deg); }
+
     footer { background: #1e293b; color: #e2e8f0; font-size: 14px; padding: 60px 20px 40px; text-align: center; line-height: 1.8; border-top: 1px solid #334155; }
     .contact-info { margin-bottom: 30px; font-size: 16px; }
-    .contact-info a { color: #93c5fd; text-decoration: none; font-weight: 500; transition: color 0.2s; }
-    .contact-info a:hover { color: #bfdbfe; }
+    .contact-info a { color: #93c5fd; text-decoration: none; }
     .address { max-width: 800px; margin: 0 auto 20px; opacity: 0.9; }
     .business-info { font-size: 13px; opacity: 0.85; }
-    @media (max-width: 768px) { nav { padding: 12px 10px; } nav a { margin: 0 10px; font-size: 15px; } .hero { padding: 160px 20px 100px; background-attachment: scroll; } .hero h1 { font-size: 38px; } .hero .subtitle { font-size: 20px; } section h2 { font-size: 30px; } .highlight-box { padding: 30px 20px; } .benefits { flex-direction: column; gap: 20px; } .service-title { padding: 20px 24px; font-size: 17px; } }
   </style>
 </head>
-<body>
-  <nav>
-    <a href="index.html">Company Overview</a>
-    <a href="financial.html">Corporate Finance & Management Consulting</a>
-    <a href="realestate.html">Comprehensive Real Estate Asset Management</a>
-    <a href="legal.html" class="active">Tax, Inheritance & Corporate Legal Services</a>
-    <a href="vvip.html">VVIP Services</a>
-  </nav>
 
-  <div class="hero">
-    <h1>Tax, Inheritance & Corporate Legal Services</h1>
-    <div class="subtitle">Professional Legal & Tax Support for Asset Protection and Tax Savings</div>
-    <div class="intro">
-      From gift, inheritance, tax appeals to corporate dissolution and liquidation, daily legal counseling, and licensing & administrative law advisory,<br>
-      we provide comprehensive solutions to minimize legal risks for both corporations and individuals.
+<body>
+
+<nav>
+  <a href="index.html">Company Overview</a>
+  <a href="financial.html">Corporate Finance & Management Consulting</a>
+  <a href="realestate.html" class="active">Comprehensive Real Estate Asset Management</a>
+  <a href="legal.html">Tax, Inheritance & Corporate Legal Services</a>
+  <a href="vvip.html">VVIP Services</a>
+</nav>
+
+<div class="hero">
+  <h1>Comprehensive Real Estate Asset Management</h1>
+  <div class="subtitle">Maximizing Value and Stable Operation of Real Estate Assets</div>
+  <div class="intro">
+    We support comprehensive asset allocation and liquidity through financial-linked real estate strategies.<br>
+    From improvement projects to management, sales, leasing, and the entire process consulting.
+  </div>
+</div>
+
+<section style="padding-top: 40px; background: #f8f9fc; padding-bottom: 60px;">
+  <div class="highlight-box">
+    <h2>We Maximize Every Value of Your Real Estate Assets</h2>
+    <p>From acquisition, development, management, sale to inheritance — professional management of the entire real estate lifecycle.</p>
+    <div class="benefits">
+      <div class="benefit-item"><h3>✔ Asset Value Appreciation</h3><p>Maximize returns through improvement and liquidity strategies</p></div>
+      <div class="benefit-item"><h3>✔ Risk Minimization</h3><p>Pre-management of market volatility, tax, and legal risks</p></div>
+      <div class="benefit-item"><h3>✔ Comprehensive Management</h3><p>Integrated financial, tax, and legal solutions</p></div>
     </div>
   </div>
+</section>
 
-  <section style="padding-top: 40px; background: #f8f9fc; padding-bottom: 60px;">
-    <div class="highlight-box">
-      <h2>We Perfectly Manage Legal & Tax Risks</h2>
-      <p>From inheritance, gift, and tax to corporate law and administrative advisory — optimal legal solutions for every situation.</p>
-      <div class="benefits">
-        <div class="benefit-item">
-          <h3>✔ Tax Minimization</h3>
-          <p>Reduce burden through legitimate tax-saving strategies</p>
-        </div>
-        <div class="benefit-item">
-          <h3>✔ Preemptive Risk Prevention</h3>
-          <p>Prevent inheritance, gift, and litigation risks</p>
-        </div>
-        <div class="benefit-item">
-          <h3>✔ One-Stop Advisory</h3>
-          <p>Integrated legal, tax, and administrative support</p>
-        </div>
+<section>
+  <h2>Main Services</h2>
+  <div class="service-grid">
+
+    <div class="service-item">
+      <div class="service-title" onclick="toggleService(this)">1. Non-Residential & Residential Improvement Projects <span>−</span></div>
+      <div class="service-content">
+        We design remodeling, redevelopment, and expansion strategies to enhance the value of residential and commercial properties.
+        Our services include project planning, contractor selection, permitting support, and construction cost optimization.
+        We also develop post-completion leasing and sale strategies to maximize returns.
+        Each project is managed with strict cost and risk control.
+        Solutions are tailored for both individual property owners and large-scale developments.
       </div>
     </div>
-  </section>
 
-  <section>
-    <h2>Main Services</h2>
-    <div class="service-grid">
-      <div class="service-item">
-        <div class="service-title" onclick="toggleService(this)">
-          1. Gift, Inheritance, Tax Appeals, and Tax-Saving Strategies <span>−</span>
-        </div>
-        <div class="service-content">
-          We establish optimized strategies to minimize tax burden during gift and inheritance processes.<br>
-          We provide legitimate and efficient tax reduction solutions through gift/inheritance tax saving plans, intra-family share transfer planning, tax appeal representation, and tax audit response.<br>
-          We offer personalized long-term tax-saving plans and regular tax review services for both individuals and corporations.
-        </div>
-      </div>
-
-      <div class="service-item">
-        <div class="service-title" onclick="toggleService(this)">
-          2. Corporate Dissolution and Liquidation <span>+</span>
-        </div>
-        <div class="service-content">
-          Safe and efficient handling of corporate dissolution and liquidation procedures.<br>
-          We manage the entire process including dissolution resolution, liquidator appointment, creditor protection, residual asset distribution, tax filing and cancellation, minimizing legal and tax risks.<br>
-          We also review tax-saving plans for personal asset transfer after dissolution.
-        </div>
-      </div>
-
-      <div class="service-item">
-        <div class="service-title" onclick="toggleService(this)">
-          3. Daily Integrated Legal Advisory and Business Licensing & Administrative Law Advisory <span>+</span>
-        </div>
-        <div class="service-content">
-          Integrated legal advisory for everyday issues and all legal matters required for business operations.<br>
-          We prevent legal risks in advance through contract review/drafting, licensing/administrative procedures, labor/commercial/intellectual property dispute response, and regulatory compliance checks.<br>
-          We operate regular legal reviews and emergency advisory hotlines to ensure peace of mind in business operations.
-        </div>
+    <div class="service-item">
+      <div class="service-title" onclick="toggleService(this)">2. Comprehensive Real Estate Asset Management & Liquidity Strategy <span>+</span></div>
+      <div class="service-content">
+        We provide holistic diagnosis and management strategies for real estate portfolios.
+        Services include rental income optimization, tax-efficient ownership structuring, and exit timing analysis.
+        Asset liquidity is enhanced through refinancing, funds, REITs, and collateral-based financing.
+        Regular performance monitoring and reporting ensure transparency.
+        Long-term stability and value growth are our primary objectives.
       </div>
     </div>
-  </section>
 
-  <footer>
-    <div class="contact-info">
-      <a href="tel:15331011">Tel. 1533-1011</a> |
-      <a href="mailto:vivensasset@naver.com">E-mail. vivensasset@naver.com</a>
+    <div class="service-item">
+      <div class="service-title" onclick="toggleService(this)">3. Financial & Real Estate Investment Advisory <span>+</span></div>
+      <div class="service-content">
+        We advise on real estate-linked investment opportunities aligned with financial goals.
+        Market analysis, risk assessment, and return projections are conducted before investment decisions.
+        Both direct and indirect investment structures are evaluated.
+        Capital protection and risk diversification are emphasized.
+        Clients receive objective, data-driven investment guidance.
+      </div>
     </div>
-    <div class="address">
-      Gyeongsang Branch: 1003, 20, Seoseong-ro, Jung-gu, Daegu, 41933 Korea
-    </div>
-    <div class="business-info">
-      Business Registration No. 803-86-03360
-    </div>
-  </footer>
 
-  <script>
-    function toggleService(element) {
-      const content = element.nextElementSibling;
-      const sign = element.querySelector("span");
-      if (content.style.display === "block") {
-        content.style.display = "none";
-        sign.textContent = "+";
-        sign.style.transform = "rotate(0deg)";
-      } else {
-        content.style.display = "block";
-        sign.textContent = "−";
-        sign.style.transform = "rotate(180deg)";
-      }
+    <div class="service-item">
+      <div class="service-title" onclick="toggleService(this)">4. Real Estate Investment Structuring & Advisory <span>+</span></div>
+      <div class="service-content">
+        We design optimal ownership and investment structures for real estate assets.
+        This includes individual, corporate, joint investment, and SPC structures.
+        Tax efficiency, financing feasibility, and exit flexibility are carefully balanced.
+        Legal and financial risks are identified and mitigated in advance.
+        Structuring is aligned with long-term asset and succession strategies.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="contact-info">
+    <a href="tel:15331011">Tel. 1533-1011</a> |
+    <a href="mailto:vivensasset@naver.com">E-mail. vivensasset@naver.com</a>
+  </div>
+  <div class="address">
+    Gyeongsang Branch: 1003, 20, Seoseong-ro, Jung-gu, Daegu, 41933 Korea
+  </div>
+  <div class="business-info">
+    Business Registration No. 803-86-03360
+  </div>
+</footer>
+
+<script>
+  function toggleService(element) {
+    const content = element.nextElementSibling;
+    const sign = element.querySelector("span");
+    if (content.style.display === "block") {
+      content.style.display = "none";
+      sign.textContent = "+";
+      sign.style.transform = "rotate(0deg)";
+    } else {
+      content.style.display = "block";
+      sign.textContent = "−";
+      sign.style.transform = "rotate(180deg)";
     }
-  </script>
+  }
+</script>
+
 </body>
 </html>

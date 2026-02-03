@@ -34,7 +34,6 @@
       font-weight: 600;
       margin: 0 18px;
       font-size: 16px;
-      transition: color 0.3s;
     }
 
     nav a:hover,
@@ -49,7 +48,6 @@
 
     /* HERO */
     .hero {
-      position: relative;
       background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
         url("https://www.shutterstock.com/image-photo/two-professional-businessmen-shake-hands-600nw-2685764993.jpg");
       background-size: cover;
@@ -64,27 +62,9 @@
       justify-content: center;
     }
 
-    .hero h1 {
-      font-size: 52px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      text-shadow: 0 2px 15px rgba(0,0,0,0.8);
-    }
-
-    .hero .subtitle {
-      font-size: 24px;
-      margin-bottom: 40px;
-      font-weight: 400;
-      text-shadow: 0 1px 8px rgba(0,0,0,0.7);
-    }
-
-    .hero .intro {
-      max-width: 900px;
-      margin: 0 auto 45px;
-      font-size: 19px;
-      line-height: 1.8;
-      text-shadow: 0 1px 8px rgba(0,0,0,0.7);
-    }
+    .hero h1 { font-size: 52px; margin-bottom: 20px; }
+    .hero .subtitle { font-size: 24px; margin-bottom: 40px; }
+    .hero .intro { max-width: 900px; margin: 0 auto 45px; font-size: 19px; }
 
     .cta-buttons {
       display: flex;
@@ -101,20 +81,11 @@
       font-weight: 600;
       border-radius: 8px;
       text-decoration: none;
-      transition: all 0.3s;
-      box-shadow: 0 4px 15px rgba(59,130,246,0.4);
-    }
-
-    .cta-btn:hover {
-      background: #2563eb;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 25px rgba(59,130,246,0.5);
     }
 
     .hero-phone {
       font-size: 22px;
       font-weight: 700;
-      margin-top: 6px;
     }
 
     .hero-phone a {
@@ -122,38 +93,24 @@
       text-decoration: none;
     }
 
-    .hero-phone a:hover {
-      color: #bfdbfe;
-    }
-
     section {
       max-width: 1150px;
       margin: 0 auto;
-      padding: 100px 20px 90px;
+      padding: 100px 20px;
     }
 
-    section h2 {
+    h2 {
       text-align: center;
-      font-size: 38px;
+      font-size: 36px;
       margin-bottom: 40px;
-      font-weight: 600;
-      color: #1a1a1a;
     }
 
     .highlight-box {
       background: #f8f9fc;
       border-radius: 12px;
-      padding: 50px 40px;
+      padding: 50px;
       margin-bottom: 80px;
       text-align: center;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.06);
-    }
-
-    .highlight-box p {
-      font-size: 19px;
-      color: #444;
-      max-width: 800px;
-      margin: 0 auto 50px;
     }
 
     .strengths {
@@ -167,120 +124,115 @@
       padding: 30px;
       border-radius: 12px;
       box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      text-align: center;
+    }
+
+    /* SUCCESS STORIES */
+    .case-study {
+      background: #ffffff;
+      padding: 60px 0;
+      border-bottom: 1px solid #eee;
+    }
+
+    .case-study h3 {
+      font-size: 26px;
+      color: #1e293b;
+      margin-bottom: 15px;
+    }
+
+    .case-study p {
+      max-width: 900px;
+      margin: 0 auto 15px;
+      color: #444;
+      font-size: 16px;
     }
 
     footer {
       background: #1e293b;
       color: #e2e8f0;
-      font-size: 14px;
-      padding: 60px 20px 40px;
+      padding: 60px 20px;
       text-align: center;
-      border-top: 1px solid #334155;
     }
 
     @media (max-width: 768px) {
-      nav a {
-        display: inline-block;
-        margin: 6px 10px;
-        font-size: 14px;
-      }
-
-      .hero {
-        padding: 180px 20px 120px;
-        background-attachment: scroll;
-      }
-
-      .hero h1 {
-        font-size: 38px;
-      }
-
-      .hero .subtitle {
-        font-size: 20px;
-      }
-
-      .hero .intro {
-        font-size: 17px;
-      }
-
-      .hero-phone {
-        font-size: 18px;
-      }
-
-      .strengths {
-        grid-template-columns: 1fr;
-      }
+      .strengths { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 38px; }
     }
   </style>
 </head>
 
 <body>
 
-  <nav>
-    <a href="index.html" class="active">Company Overview</a>
-    <a href="financial.html">Corporate Finance & Management Consulting</a>
-    <a href="realestate.html">Comprehensive Real Estate Asset Management</a>
-    <a href="legal.html">Tax, Inheritance & Corporate Legal Services</a>
-    <a href="vvip.html">VVIP Services</a>
-  </nav>
+<nav>
+  <a href="index.html" class="active">Company Overview</a>
+  <a href="financial.html">Corporate Finance & Management Consulting</a>
+  <a href="realestate.html">Comprehensive Real Estate Asset Management</a>
+  <a href="legal.html">Tax, Inheritance & Corporate Legal Services</a>
+  <a href="vvip.html">VVIP Services</a>
+</nav>
 
-  <div class="hero">
-    <h1>Vivens Asset Management Partners</h1>
-    <div class="subtitle">Building Trust and Expertise for Your Future</div>
+<div class="hero">
+  <h1>Vivens Asset Management Partners</h1>
+  <div class="subtitle">Building Trust and Expertise for Your Future</div>
+  <div class="intro">
+    We focus on long-term stability and risk minimization rather than short-term gains,
+    supporting the entire lifecycle of your assets.
+  </div>
+  <div class="cta-buttons">
+    <a href="financial.html" class="cta-btn">Explore Our Services</a>
+    <div class="hero-phone"><a href="tel:15331011">📞 1533-1011</a></div>
+  </div>
+</div>
 
-    <div class="intro">
-      We focus on long-term stability and risk minimization rather than short-term gains,<br>
-      supporting the entire lifecycle of your assets—from startup to restructuring, inheritance,<br>
-      real estate management, and premium VVIP services.
-    </div>
+<section>
+  <h2>Success Stories</h2>
 
-    <div class="cta-buttons">
-      <a href="financial.html" class="cta-btn">Explore Our Services</a>
-      <div class="hero-phone">
-        <a href="tel:15331011">📞 1533-1011</a>
-      </div>
-    </div>
+  <div class="case-study">
+    <h3>M&A Strategy for Corporate Growth</h3>
+    <p>A mid-sized company facing growth limitations pursued expansion through a strategic acquisition.</p>
+    <p>Vivens Asset identified suitable acquisition targets aligned with long-term objectives.</p>
+    <p>Comprehensive due diligence and valuation analysis were conducted.</p>
+    <p>A balanced transaction structure minimized financial and tax risks.</p>
+    <p>The acquisition successfully expanded the company’s business portfolio and growth potential.</p>
   </div>
 
-  <!-- 기존 하단 섹션들 그대로 유지 -->
-  <section style="padding-top:40px; background:#f8f9fc;">
-    <div class="highlight-box">
-      <h2>Your Reliable Partner for Growth</h2>
-      <p>
-        From the first step of entrepreneurship to crisis recovery and legacy planning —
-        we stand by you at every moment with expert insight.
-      </p>
+  <div class="case-study">
+    <h3>Gift, Inheritance & Family Business Succession</h3>
+    <p>A family-owned enterprise sought a smooth generational transition with minimized tax exposure.</p>
+    <p>Asset, ownership, and family structures were comprehensively analyzed.</p>
+    <p>A phased gift and inheritance strategy was implemented.</p>
+    <p>Governance stability and ownership control were preserved.</p>
+    <p>The business achieved a sustainable multi-generational succession framework.</p>
+  </div>
 
-      <div class="strengths">
-        <div class="strength-item">
-          <h3>One-Stop Integrated Solution</h3>
-          <p>Finance, real estate, legal, and tax services all in one place</p>
-        </div>
-        <div class="strength-item">
-          <h3>Expert Crisis Management</h3>
-          <p>Proven success in restructuring, M&A, and debt reorganization</p>
-        </div>
-        <div class="strength-item">
-          <h3>Long-term Partnership</h3>
-          <p>Beyond one-time consulting — building lasting relationships</p>
-        </div>
-        <div class="strength-item">
-          <h3>VVIP Premium Care</h3>
-          <p>24/7 dedicated support for high-net-worth clients</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="case-study">
+    <h3>Financial Investment Asset Risk Management Solution</h3>
+    <p>A high-net-worth individual held a diversified yet risk-concentrated investment portfolio.</p>
+    <p>Vivens Asset conducted a full risk assessment across asset classes.</p>
+    <p>Portfolio rebalancing reduced volatility and concentration risk.</p>
+    <p>Long-term stability replaced short-term return dependency.</p>
+    <p>The client achieved improved asset resilience amid market fluctuations.</p>
+  </div>
 
-  <footer>
-    <div>📞 Tel. 1533-1011 | ✉️ vivensasset@naver.com</div>
-    <div style="margin-top:15px;">
-      Gyeongsang Branch: 1003, 20, Seoseong-ro, Jung-gu, Daegu, 41933 Korea
-    </div>
-    <div style="margin-top:10px; font-size:13px;">
-      Business Registration No. 803-86-03360
-    </div>
-  </footer>
+  <div class="case-study">
+    <h3>Real Estate Asset Liquidity Solution</h3>
+    <p>A corporation owned valuable real estate assets with limited liquidity.</p>
+    <p>Vivens Asset analyzed asset value and utilization efficiency.</p>
+    <p>Multiple liquidity options were evaluated, including sales and structured financing.</p>
+    <p>A tailored liquidity strategy improved cash flow without compromising asset value.</p>
+    <p>Real estate assets were repositioned as flexible financial resources.</p>
+  </div>
+
+</section>
+
+<footer>
+  <div>📞 Tel. 1533-1011 | ✉️ vivensasset@naver.com</div>
+  <div style="margin-top:15px;">
+    Gyeongsang Branch: 1003, 20, Seoseong-ro, Jung-gu, Daegu, 41933 Korea
+  </div>
+  <div style="margin-top:10px; font-size:13px;">
+    Business Registration No. 803-86-03360
+  </div>
+</footer>
 
 </body>
 </html>

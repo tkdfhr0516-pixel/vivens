@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vivens Asset Management Partners - Comprehensive Real Estate Asset Management</title>
+
   <style>
     body { margin: 0; font-family: "Noto Sans KR", Arial, sans-serif; background-color: #ffffff; color: #222; line-height: 1.7; }
     nav { position: fixed; top: 0; left: 0; right: 0; background: #1e293b; border-bottom: 1px solid #334155; z-index: 1000; padding: 15px 20px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
@@ -19,90 +20,72 @@
       background-position: center 35%;
       background-attachment: fixed;
       color: #fff;
-      padding: 220px 20px 140px;
+      padding: 220px 20px 150px;
       text-align: center;
       min-height: 65vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
+
     .hero::before { content: ''; position: absolute; inset: 0; background: inherit; z-index: 1; }
     .hero > * { position: relative; z-index: 2; }
 
-    .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
-    .hero .subtitle { font-size: 22px; margin-bottom: 30px; font-weight: 400; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
-    .hero .intro { max-width: 850px; margin: 0 auto; font-size: 18px; line-height: 1.9; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
+    .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; }
+    .hero .subtitle { font-size: 22px; margin-bottom: 30px; }
+    .hero .intro { max-width: 850px; margin: 0 auto; font-size: 18px; line-height: 1.9; }
 
-    section { max-width: 1150px; margin: 0 auto; padding: 100px 20px 90px; }
-    section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; font-weight: 600; }
+    section { max-width: 1150px; margin: 0 auto; padding: 100px 20px; }
+    section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; }
 
     .highlight-box {
       background: #f8f9fc;
       border-radius: 12px;
-      padding: 40px 30px;
-      margin-bottom: 60px;
+      padding: 50px 40px;
+      margin-bottom: 80px;
       text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.06);
     }
-    .highlight-box h2 { font-size: 32px; margin-bottom: 20px; }
-    .highlight-box p { font-size: 18px; color: #444; margin-bottom: 40px; max-width: 850px; margin-left: auto; margin-right: auto; }
 
-    .benefits { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-    .benefit-item {
-      flex: 1;
-      min-width: 280px;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      transition: transform 0.3s;
-    }
-    .benefit-item:hover { transform: translateY(-10px); }
-    .benefit-item h3 { font-size: 20px; margin-bottom: 12px; color: #2c5282; }
-    .benefit-item p { font-size: 15px; color: #555; }
-
-    .service-grid { display: grid; gap: 20px; max-width: 900px; margin: 0 auto; }
-    .service-item {
-      border: 1px solid #e3e6eb;
-      border-radius: 12px;
-      overflow: hidden;
-      background-color: #fff;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-    }
-    .service-title {
-      cursor: pointer;
-      padding: 24px 28px;
+    .highlight-box p {
+      max-width: 850px;
+      margin: 0 auto;
       font-size: 18px;
-      font-weight: 500;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%);
-    }
-    .service-title span { font-size: 22px; font-weight: 300; }
-    .service-content {
-      display: none;
-      padding: 0 28px 28px;
-      font-size: 15.5px;
+      line-height: 1.9;
       color: #444;
-      line-height: 1.75;
     }
-    .service-item:first-child .service-content { display: block; }
-    .service-item:first-child .service-title span { transform: rotate(180deg); }
+
+    .service {
+      max-width: 900px;
+      margin: 0 auto 50px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .service h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #1a1a1a;
+    }
+
+    .service p {
+      font-size: 16.5px;
+      line-height: 1.8;
+      color: #444;
+    }
 
     footer {
       background: #1e293b;
       color: #e2e8f0;
-      font-size: 14px;
-      padding: 60px 20px 40px;
+      padding: 60px 20px;
       text-align: center;
-      line-height: 1.8;
-      border-top: 1px solid #334155;
     }
-    .contact-info { margin-bottom: 30px; font-size: 16px; }
-    .contact-info a { color: #93c5fd; text-decoration: none; font-weight: 500; }
-    .address { max-width: 800px; margin: 0 auto 20px; opacity: 0.9; }
-    .business-info { font-size: 13px; opacity: 0.85; }
+
+    .contact-info a { color: #93c5fd; text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 36px; }
+    }
   </style>
 </head>
 
@@ -118,140 +101,100 @@
 
 <div class="hero">
   <h1>Comprehensive Real Estate Asset Management</h1>
-  <div class="subtitle">Maximizing Value and Stable Operation of Real Estate Assets</div>
+  <div class="subtitle">Maximizing Asset Value Through Strategic Real Estate Management</div>
 
   <div class="intro">
+    Real estate assets require long-term strategic management,
+    not short-term market timing or fragmented decisions.<br><br>
+
     We provide comprehensive real estate asset management services
-    designed to maximize long-term value while maintaining operational stability.<br><br>
+    that integrate financial strategy, tax optimization,
+    legal structuring, and operational management into a single framework.<br><br>
 
-    Our services cover the entire real estate lifecycle — from acquisition,
-    improvement, leasing, and management to disposition and asset liquidity strategies.<br><br>
-
-    By integrating financial planning, tax optimization, and legal risk management,
-    we help clients secure stable cash flow and sustainable asset appreciation.<br><br>
-
-    All strategies are customized to market conditions and aligned with broader
-    asset protection and succession planning objectives.
+    From development and improvement projects
+    to liquidity planning and portfolio restructuring,
+    our approach ensures stable cash flow and sustainable asset appreciation.
   </div>
 </div>
 
-<section style="padding-top: 40px; background: #f8f9fc; padding-bottom: 60px;">
+<section>
   <div class="highlight-box">
-    <h2>We Maximize Every Value of Your Real Estate Assets</h2>
+    <h2>End-to-End Management Across the Entire Real Estate Lifecycle</h2>
     <p>
-      Real estate is not merely a fixed asset but a dynamic source of cash flow and long-term value.<br>
-      We manage every stage — acquisition, improvement, operation, and exit —
-      with a structured and data-driven approach.<br>
-      Our integrated strategies focus on minimizing market, tax, and legal risks
-      while enhancing asset liquidity and profitability.
-    </p>
+      Real estate assets often represent the largest portion of a client’s wealth,
+      yet they are also the most illiquid and risk-sensitive.<br><br>
 
-    <div class="benefits">
-      <div class="benefit-item">
-        <h3>✔ Asset Value Appreciation</h3>
-        <p>Strategic improvement and timing-based exit planning to maximize returns</p>
-      </div>
-      <div class="benefit-item">
-        <h3>✔ Risk Minimization</h3>
-        <p>Preemptive management of market volatility, tax exposure, and legal risks</p>
-      </div>
-      <div class="benefit-item">
-        <h3>✔ Comprehensive Management</h3>
-        <p>Integrated financial, tax, and legal solutions in one advisory framework</p>
-      </div>
-    </div>
+      Vivens Asset Management Partners manages real estate assets
+      from acquisition and development
+      to operation, sale, inheritance, and succession planning.<br><br>
+
+      Our goal is to transform static properties into strategic assets
+      that generate stable income while preserving long-term value.
+    </p>
   </div>
 </section>
 
 <section>
   <h2>Main Services</h2>
-  <div class="service-grid">
 
-    <div class="service-item">
-      <div class="service-title" onclick="toggleService(this)">
-        1. Non-Residential & Residential Improvement Projects <span>−</span>
-      </div>
-      <div class="service-content">
-        We design remodeling, redevelopment, and expansion strategies to enhance the value
-        of residential and commercial properties.
-        Services include project planning, contractor selection, permitting support,
-        and construction cost optimization.
-        Post-completion leasing and sale strategies are also developed to maximize returns.
-        Each project is managed with strict cost and risk control.
-      </div>
-    </div>
-
-    <div class="service-item">
-      <div class="service-title" onclick="toggleService(this)">
-        2. Comprehensive Real Estate Asset Management & Liquidity Strategy <span>+</span>
-      </div>
-      <div class="service-content">
-        We provide holistic diagnosis and management strategies for real estate portfolios.
-        Services include rental income optimization, tax-efficient ownership structuring,
-        and exit timing analysis.
-        Asset liquidity is enhanced through refinancing, funds, REITs,
-        and collateral-based financing solutions.
-        Regular performance monitoring ensures transparency and stability.
-      </div>
-    </div>
-
-    <div class="service-item">
-      <div class="service-title" onclick="toggleService(this)">
-        3. Financial & Real Estate Investment Advisory <span>+</span>
-      </div>
-      <div class="service-content">
-        We advise on real estate-linked investment opportunities aligned with financial goals.
-        Market analysis, risk assessment, and return projections are conducted
-        prior to investment decisions.
-        Both direct and indirect investment structures are evaluated objectively.
-        Capital protection and diversification are emphasized in every recommendation.
-      </div>
-    </div>
-
-    <div class="service-item">
-      <div class="service-title" onclick="toggleService(this)">
-        4. Real Estate Investment Structuring & Advisory <span>+</span>
-      </div>
-      <div class="service-content">
-        We design optimal ownership and investment structures for real estate assets,
-        including individual, corporate, joint investment, and SPC structures.
-        Tax efficiency, financing feasibility, and exit flexibility are carefully balanced.
-        Legal and financial risks are identified and mitigated in advance.
-        All structures are aligned with long-term asset and succession strategies.
-      </div>
-    </div>
-
+  <div class="service">
+    <h3>1. Residential & Non-Residential Improvement Projects</h3>
+    <p>
+      We design value-enhancing improvement strategies
+      for residential and commercial properties,
+      including remodeling, redevelopment, and expansion projects.
+      Services include feasibility analysis,
+      project planning, contractor coordination,
+      cost optimization, and post-completion leasing strategies.
+    </p>
   </div>
+
+  <div class="service">
+    <h3>2. Comprehensive Real Estate Asset Management & Liquidity Strategy</h3>
+    <p>
+      We provide holistic management of real estate portfolios,
+      focusing on rental income optimization,
+      ownership structure review,
+      tax efficiency, and liquidity planning.
+      Strategies include refinancing, asset sales,
+      REIT participation, and financial product linkage.
+    </p>
+  </div>
+
+  <div class="service">
+    <h3>3. Financial & Real Estate Investment Advisory</h3>
+    <p>
+      We advise clients on real estate-linked investment opportunities
+      aligned with their financial objectives and risk tolerance.
+      This includes market analysis,
+      return projections,
+      risk assessment, and portfolio diversification strategies.
+    </p>
+  </div>
+
+  <div class="service">
+    <h3>4. Real Estate Investment Structuring & Advisory</h3>
+    <p>
+      We design optimal ownership and investment structures
+      for real estate assets,
+      including individual, corporate, joint investment,
+      and special purpose vehicle (SPV) structures.
+      Legal, tax, and exit considerations
+      are addressed from the outset.
+    </p>
+  </div>
+
 </section>
 
 <footer>
   <div class="contact-info">
     <a href="tel:15331011">Tel. 1533-1011</a> |
-    <a href="mailto:vivensasset@naver.com">E-mail. vivensasset@naver.com</a>
+    <a href="mailto:vivensasset@naver.com">vivensasset@naver.com</a>
   </div>
-  <div class="address">
-    Gyeongsang Branch: 1003, 20, Seoseong-ro, Jung-gu, Daegu, 41933 Korea
-  </div>
-  <div class="business-info">
-    Business Registration No. 803-86-03360
+  <div>
+    Gyeongsang Branch: 1003, 20, Seoseong-ro, Jung-gu, Daegu, Korea
   </div>
 </footer>
-
-<script>
-  function toggleService(element) {
-    const content = element.nextElementSibling;
-    const sign = element.querySelector("span");
-    if (content.style.display === "block") {
-      content.style.display = "none";
-      sign.textContent = "+";
-      sign.style.transform = "rotate(0deg)";
-    } else {
-      content.style.display = "block";
-      sign.textContent = "−";
-      sign.style.transform = "rotate(180deg)";
-    }
-  }
-</script>
 
 </body>
 </html>

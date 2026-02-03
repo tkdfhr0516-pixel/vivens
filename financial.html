@@ -1,147 +1,113 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vivens Asset Management Partners - Corporate Finance & Management Consulting</title>
-  <style>
-    /* 기존 스타일 그대로 복사 (변경 없음) */
-    body { margin: 0; font-family: "Noto Sans KR", Arial, sans-serif; background-color: #ffffff; color: #222; line-height: 1.7; }
-    nav { position: fixed; top: 0; left: 0; right: 0; background: #1e293b; border-bottom: 1px solid #334155; z-index: 1000; padding: 15px 20px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-    nav a { color: #e2e8f0; text-decoration: none; font-weight: 600; margin: 0 20px; font-size: 17px; transition: color 0.3s; }
-    nav a:hover, nav a.active { color: #93c5fd; }
-    nav a.active { border-bottom: 3px solid #93c5fd; padding-bottom: 5px; }
-    .hero { position: relative; background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.68)), url("https://www.shutterstock.com/image-photo/corporate-team-collaborates-office-analyzing-600nw-2668026323.jpg"); background-size: cover; background-position: center 35%; background-attachment: fixed; color: #fff; padding: 220px 20px 140px; text-align: center; min-height: 65vh; display: flex; flex-direction: column; justify-content: center; }
-    .hero::before { content: ''; position: absolute; top:0; left:0; right:0; bottom:0; background: inherit; z-index: 1; }
-    .hero > * { position: relative; z-index: 2; }
-    .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
-    .hero .subtitle { font-size: 22px; margin-bottom: 40px; font-weight: 400; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
-    .hero .intro { max-width: 800px; margin: 0 auto; font-size: 18px; line-height: 1.8; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
-    section { max-width: 1150px; margin: 0 auto; padding: 100px 20px 90px; }
-    section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; font-weight: 600; color: #1a1a1a; }
-    .highlight-box { background: #f8f9fc; border-radius: 12px; padding: 40px 30px; margin-bottom: 60px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-    .highlight-box h2 { font-size: 32px; margin-bottom: 20px; color: #1a1a1a; }
-    .highlight-box p { font-size: 18px; color: #444; margin-bottom: 40px; }
-    .benefits { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-    .benefit-item { flex: 1; min-width: 280px; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); transition: transform 0.3s; }
-    .benefit-item:hover { transform: translateY(-10px); }
-    .benefit-item h3 { font-size: 20px; margin-bottom: 12px; color: #2c5282; }
-    .benefit-item p { font-size: 15px; color: #555; }
-    .service-grid { display: grid; gap: 20px; max-width: 900px; margin: 0 auto; }
-    .service-item { border: 1px solid #e3e6eb; border-radius: 12px; overflow: hidden; background-color: #fff; box-shadow: 0 6px 20px rgba(0,0,0,0.06); transition: all 0.3s ease; }
-    .service-item:hover { box-shadow: 0 12px 32px rgba(0,0,0,0.12); transform: translateY(-2px); }
-    .service-title { cursor: pointer; padding: 24px 28px; font-size: 18px; font-weight: 500; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%); user-select: none; transition: all 0.2s ease; }
-    .service-title:hover { background: linear-gradient(135deg, #eef2f8 0%, #f8f9fc 100%); }
-    .service-title span { font-size: 22px; font-weight: 300; transition: transform 0.2s ease; min-width: 24px; text-align: center; }
-    .service-content { display: none; padding: 0 28px 28px; font-size: 15.5px; color: #444; line-height: 1.75; }
-    .service-item:first-child .service-content { display: block; }
-    .service-item:first-child .service-title span { transform: rotate(180deg); }
-    footer { background: #1e293b; color: #e2e8f0; font-size: 14px; padding: 60px 20px 40px; text-align: center; line-height: 1.8; border-top: 1px solid #334155; }
-    .contact-info { margin-bottom: 30px; font-size: 16px; }
-    .contact-info a { color: #93c5fd; text-decoration: none; font-weight: 500; transition: color 0.2s; }
-    .contact-info a:hover { color: #bfdbfe; }
-    .address { max-width: 800px; margin: 0 auto 20px; opacity: 0.9; }
-    .business-info { font-size: 13px; opacity: 0.85; }
-    @media (max-width: 768px) { nav { padding: 12px 10px; } nav a { margin: 0 10px; font-size: 15px; } .hero { padding: 160px 20px 100px; background-attachment: scroll; } .hero h1 { font-size: 38px; } .hero .subtitle { font-size: 20px; } section h2 { font-size: 30px; } .highlight-box { padding: 30px 20px; } .benefits { flex-direction: column; gap: 20px; } .service-title { padding: 20px 24px; font-size: 17px; } }
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="index.html">Company Overview</a>
-    <a href="financial.html" class="active">Corporate Finance & Management Consulting</a>
-    <a href="realestate.html">Comprehensive Real Estate Asset Management</a>
-    <a href="legal.html">Tax, Inheritance & Corporate Legal Services</a>
-    <a href="vvip.html">VVIP Services</a>
-  </nav>
+<div class="service-grid">
 
-  <div class="hero">
-    <h1>Corporate Finance & Management Consulting</h1>
-    <div class="subtitle">Your Professional Partner for Business Growth and Stability</div>
-    <div class="intro">
-      From startup to restructuring, M&A, and family business succession,<br>
-      we provide tailored financial strategies and management consulting throughout the entire corporate lifecycle.
+  <div class="service-item">
+    <div class="service-title" onclick="toggleService(this)">
+      1. Startup and New Corporate Establishment <span>−</span>
+    </div>
+    <div class="service-content">
+      We provide end-to-end support for entrepreneurs, startups, and businesses transitioning into corporate entities.
+      Our services cover business registration, corporate structuring, articles of incorporation, shareholding design,
+      initial capital planning, and governance framework setup.
+      We also assist with early-stage tax, labor, licensing, and regulatory considerations.
+      By minimizing unnecessary initial costs and risks, we help businesses establish a stable operational foundation.
+      Each client receives a customized 1:1 strategy tailored to long-term scalability and sustainability.
     </div>
   </div>
 
-  <section style="padding-top: 40px; background: #f8f9fc; padding-bottom: 60px;">
-    <div class="highlight-box">
-      <h2>We Stand by Your Business at Every Stage</h2>
-      <p>From the beginning of entrepreneurship to overcoming crises and achieving sustained growth — your dedicated finance and management partner is here.</p>
-      <div class="benefits">
-        <div class="benefit-item">
-          <h3>✔ Minimal Initial Costs</h3>
-          <p>Start quickly with reasonable expenses</p>
-        </div>
-        <div class="benefit-item">
-          <h3>✔ Rapid Crisis Response</h3>
-          <p>Expert support for restructuring and debt reorganization</p>
-        </div>
-        <div class="benefit-item">
-          <h3>✔ Long-term Growth Roadmap</h3>
-          <p>Comprehensive strategies for M&A, succession, and investment</p>
-        </div>
-      </div>
+  <div class="service-item">
+    <div class="service-title" onclick="toggleService(this)">
+      2. Management Advisory, Diagnosis, and Business Analysis <span>+</span>
     </div>
-  </section>
-
-  <section>
-    <h2>Main Services</h2>
-    <div class="service-grid">
-      <div class="service-item">
-        <div class="service-title" onclick="toggleService(this)">
-          1. Startup and New Corporate Establishment <span>−</span>
-        </div>
-        <div class="service-content">
-          We support businesses of all sizes, from sole proprietorships to large corporations.<br>
-          From business registration to corporate conversion (stock company, limited company, etc.), articles of incorporation, shareholding structure design, initial capital structuring, and early tax, labor, and licensing setup — we provide the most optimized path.<br>
-          We focus on minimizing initial costs and establishing a stable operational foundation with personalized 1:1 strategies.
-        </div>
-      </div>
-
-      <div class="service-item">
-        <div class="service-title" onclick="toggleService(this)">
-          2. Management Advisory, Diagnosis, and Business Analysis <span>+</span>
-        </div>
-        <div class="service-content">
-          Comprehensive management diagnosis for sole proprietorships, SMEs, and mid-sized companies.<br>
-          We analyze financial statements, cash flow, cost structure, competitiveness, and internal operational efficiency to objectively identify the current situation and present practical improvement tasks and mid-to-long-term growth strategies.<br>
-          We minimize initial diagnosis costs so even small businesses can access tailored advisory services easily.
-        </div>
-      </div>
-
-      <!-- 나머지 6개 아코디언도 동일한 방식으로 영문 번역해서 넣었음 -->
-      <!-- 전체 코드가 길어지니까 여기서는 생략하고, 필요하면 전체 붙여줄게 -->
-      <!-- 3~8번도 위처럼 자연스러운 영문으로 번역됨 -->
+    <div class="service-content">
+      We conduct comprehensive management diagnostics for sole proprietorships, SMEs, and mid-sized enterprises.
+      Our analysis covers financial statements, cash flow structure, cost efficiency, competitiveness, and internal operations.
+      Through objective evaluation, we identify structural weaknesses and hidden risks.
+      Practical improvement measures and actionable mid-to-long-term growth strategies are presented.
+      Our advisory approach is designed to be accessible even for small businesses through cost-efficient diagnostics.
     </div>
-  </section>
+  </div>
 
-  <footer>
-    <div class="contact-info">
-      <a href="tel:15331011">Tel. 1533-1011</a> |
-      <a href="mailto:vivensasset@naver.com">E-mail. vivensasset@naver.com</a>
+  <div class="service-item">
+    <div class="service-title" onclick="toggleService(this)">
+      3. Corporate Restructuring & Business Normalization Strategy <span>+</span>
     </div>
-    <div class="address">
-      Gyeongsang Branch: 1003, 20, Seoseong-ro, Jung-gu, Daegu, 41933 Korea
+    <div class="service-content">
+      We support companies facing financial distress, operational inefficiencies, or excessive debt burdens.
+      Our restructuring services include debt reorganization, capital restructuring, asset realignment,
+      and business model optimization.
+      We work closely with financial institutions and stakeholders to restore liquidity and stability.
+      Each restructuring plan prioritizes business continuity and long-term recovery.
+      Our goal is not short-term survival, but sustainable normalization and renewed competitiveness.
     </div>
-    <div class="business-info">
-      Business Registration No. 803-86-03360
-    </div>
-  </footer>
+  </div>
 
-  <script>
-    function toggleService(element) {
-      const content = element.nextElementSibling;
-      const sign = element.querySelector("span");
-      if (content.style.display === "block") {
-        content.style.display = "none";
-        sign.textContent = "+";
-        sign.style.transform = "rotate(0deg)";
-      } else {
-        content.style.display = "block";
-        sign.textContent = "−";
-        sign.style.transform = "rotate(180deg)";
-      }
-    }
-  </script>
-</body>
-</html>
+  <div class="service-item">
+    <div class="service-title" onclick="toggleService(this)">
+      4. Mergers & Acquisitions (M&A) Advisory <span>+</span>
+    </div>
+    <div class="service-content">
+      We provide comprehensive M&A advisory services for both buyers and sellers.
+      Our process includes strategic target identification, valuation analysis, financial and legal due diligence,
+      and transaction structuring.
+      We focus on minimizing risks related to taxation, financing, and post-merger integration.
+      Each deal is designed to align with the client’s long-term business vision and growth strategy.
+      Our advisory extends beyond closing to ensure successful integration and value realization.
+    </div>
+  </div>
+
+  <div class="service-item">
+    <div class="service-title" onclick="toggleService(this)">
+      5. New Business Feasibility & Investment Analysis <span>+</span>
+    </div>
+    <div class="service-content">
+      Before launching a new business or investment, we conduct thorough feasibility studies.
+      Our analysis evaluates market potential, competitive landscape, financial projections,
+      risk factors, and capital requirements.
+      We provide objective assessments to prevent emotionally driven or overly optimistic decisions.
+      Clients receive clear go/no-go recommendations based on data-driven insights.
+      This service helps protect capital and improve decision-making accuracy.
+    </div>
+  </div>
+
+  <div class="service-item">
+    <div class="service-title" onclick="toggleService(this)">
+      6. Risk Assessment of Listed & Unlisted Shares <span>+</span>
+    </div>
+    <div class="service-content">
+      We assess investment risks related to both listed and unlisted corporate shares.
+      Our evaluation includes financial health, governance structure, shareholder agreements,
+      exit limitations, and valuation risks.
+      Special attention is given to unlisted shares with limited liquidity and transparency.
+      Clients gain a clear understanding of potential downside risks before acquisition or disposal.
+      This service is essential for investors seeking capital preservation alongside returns.
+    </div>
+  </div>
+
+  <div class="service-item">
+    <div class="service-title" onclick="toggleService(this)">
+      7. Co-Investment Strategy for Acquisition Financing <span>+</span>
+    </div>
+    <div class="service-content">
+      We design co-investment structures to support acquisition financing during corporate restructuring or M&A.
+      This includes partner selection, investment ratio design, risk-sharing mechanisms,
+      and exit strategy planning.
+      Our approach balances control, capital efficiency, and risk diversification.
+      Legal and financial structures are carefully aligned to prevent future disputes.
+      This strategy enables acquisitions that may otherwise be difficult to execute independently.
+    </div>
+  </div>
+
+  <div class="service-item">
+    <div class="service-title" onclick="toggleService(this)">
+      8. Corporate Dissolution & Liquidation Advisory <span>+</span>
+    </div>
+    <div class="service-content">
+      When business continuation is no longer viable, we provide structured dissolution and liquidation advisory.
+      Our services cover legal procedures, asset disposal, debt settlement, and tax optimization.
+      We aim to minimize financial losses and legal exposure during the closure process.
+      Special care is taken to protect shareholders and management from unnecessary liabilities.
+      Even in closure, we ensure the process is handled professionally and responsibly.
+    </div>
+  </div>
+
+</div>

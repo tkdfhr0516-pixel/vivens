@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vivens Asset Management Partners - Tax, Inheritance & Corporate Legal Services</title>
+
   <style>
     body { margin: 0; font-family: "Noto Sans KR", Arial, sans-serif; background-color: #ffffff; color: #222; line-height: 1.7; }
     nav { position: fixed; top: 0; left: 0; right: 0; background: #1e293b; border-bottom: 1px solid #334155; z-index: 1000; padding: 15px 20px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
@@ -19,90 +20,72 @@
       background-position: center 35%;
       background-attachment: fixed;
       color: #fff;
-      padding: 220px 20px 140px;
+      padding: 220px 20px 150px;
       text-align: center;
       min-height: 65vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
+
     .hero::before { content: ''; position: absolute; inset: 0; background: inherit; z-index: 1; }
     .hero > * { position: relative; z-index: 2; }
 
-    .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
-    .hero .subtitle { font-size: 22px; margin-bottom: 30px; font-weight: 400; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
-    .hero .intro { max-width: 850px; margin: 0 auto; font-size: 18px; line-height: 1.9; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
+    .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; }
+    .hero .subtitle { font-size: 22px; margin-bottom: 30px; }
+    .hero .intro { max-width: 900px; margin: 0 auto; font-size: 18px; line-height: 1.9; }
 
-    section { max-width: 1150px; margin: 0 auto; padding: 100px 20px 90px; }
-    section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; font-weight: 600; }
+    section { max-width: 1150px; margin: 0 auto; padding: 100px 20px; }
+    section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; }
 
     .highlight-box {
       background: #f8f9fc;
       border-radius: 12px;
-      padding: 40px 30px;
-      margin-bottom: 60px;
+      padding: 50px 40px;
+      margin-bottom: 80px;
       text-align: center;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      box-shadow: 0 6px 25px rgba(0,0,0,0.06);
     }
-    .highlight-box h2 { font-size: 32px; margin-bottom: 20px; }
-    .highlight-box p { font-size: 18px; color: #444; margin-bottom: 40px; max-width: 850px; margin-left: auto; margin-right: auto; }
 
-    .benefits { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-    .benefit-item {
-      flex: 1;
-      min-width: 280px;
-      padding: 20px;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      transition: transform 0.3s;
-    }
-    .benefit-item:hover { transform: translateY(-10px); }
-    .benefit-item h3 { font-size: 20px; margin-bottom: 12px; color: #2c5282; }
-    .benefit-item p { font-size: 15px; color: #555; }
-
-    .service-grid { display: grid; gap: 20px; max-width: 900px; margin: 0 auto; }
-    .service-item {
-      border: 1px solid #e3e6eb;
-      border-radius: 12px;
-      overflow: hidden;
-      background-color: #fff;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-    }
-    .service-title {
-      cursor: pointer;
-      padding: 24px 28px;
+    .highlight-box p {
+      max-width: 900px;
+      margin: 0 auto;
       font-size: 18px;
-      font-weight: 500;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%);
-    }
-    .service-title span { font-size: 22px; font-weight: 300; }
-    .service-content {
-      display: none;
-      padding: 0 28px 28px;
-      font-size: 15.5px;
+      line-height: 1.9;
       color: #444;
-      line-height: 1.75;
     }
-    .service-item:first-child .service-content { display: block; }
-    .service-item:first-child .service-title span { transform: rotate(180deg); }
+
+    .service {
+      max-width: 900px;
+      margin: 0 auto 50px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .service h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      color: #1a1a1a;
+    }
+
+    .service p {
+      font-size: 16.5px;
+      line-height: 1.8;
+      color: #444;
+    }
 
     footer {
       background: #1e293b;
       color: #e2e8f0;
-      font-size: 14px;
-      padding: 60px 20px 40px;
+      padding: 60px 20px;
       text-align: center;
-      line-height: 1.8;
-      border-top: 1px solid #334155;
     }
-    .contact-info { margin-bottom: 30px; font-size: 16px; }
-    .contact-info a { color: #93c5fd; text-decoration: none; font-weight: 500; }
-    .address { max-width: 800px; margin: 0 auto 20px; opacity: 0.9; }
-    .business-info { font-size: 13px; opacity: 0.85; }
+
+    .contact-info a { color: #93c5fd; text-decoration: none; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 36px; }
+    }
   </style>
 </head>
 
@@ -118,128 +101,97 @@
 
 <div class="hero">
   <h1>Tax, Inheritance & Corporate Legal Services</h1>
-  <div class="subtitle">Professional Legal & Tax Support for Asset Protection</div>
+  <div class="subtitle">Protecting Assets Through Strategic Legal and Tax Planning</div>
 
   <div class="intro">
+    Legal and tax risks often emerge not from unexpected events,
+    but from insufficient preparation and fragmented decision-making.<br><br>
+
     We provide integrated legal and tax advisory services
-    to protect assets and minimize long-term legal and tax risks.<br><br>
+    designed to protect personal and corporate assets,
+    minimize tax exposure,
+    and prevent disputes before they arise.<br><br>
 
-    Our services cover gift and inheritance planning, tax audit representation,
-    corporate dissolution and liquidation, and ongoing legal advisory for businesses.<br><br>
-
-    Rather than responding after problems arise, we focus on preventive structuring
-    that reduces disputes, unexpected tax burdens, and compliance risks.<br><br>
-
-    By aligning legal, tax, and financial perspectives,
-    we deliver practical solutions that ensure long-term asset stability.
+    Our services cover inheritance and gift planning,
+    tax audits and appeals,
+    corporate dissolution and liquidation,
+    and comprehensive legal advisory for business operations.
   </div>
 </div>
 
-<section style="padding-top: 40px; background: #f8f9fc; padding-bottom: 60px;">
+<section>
   <div class="highlight-box">
-    <h2>We Perfectly Manage Legal & Tax Risks</h2>
+    <h2>Comprehensive Legal & Tax Risk Management</h2>
     <p>
-      Legal and tax risks often arise silently and escalate rapidly if left unmanaged.<br>
-      We help clients identify potential risks in advance
-      and design structures that minimize exposure before issues occur.<br>
-      Our integrated advisory approach ensures compliance,
-      reduces unnecessary tax burdens, and prevents future disputes.
-    </p>
+      Taxation, inheritance, and corporate legal issues
+      require long-term strategic planning rather than short-term solutions.<br><br>
 
-    <div class="benefits">
-      <div class="benefit-item">
-        <h3>✔ Tax Minimization</h3>
-        <p>Legitimate tax-saving strategies based on current regulations</p>
-      </div>
-      <div class="benefit-item">
-        <h3>✔ Preemptive Risk Prevention</h3>
-        <p>Early identification and mitigation of legal and inheritance risks</p>
-      </div>
-      <div class="benefit-item">
-        <h3>✔ One-Stop Advisory</h3>
-        <p>Integrated legal, tax, and administrative advisory services</p>
-      </div>
-    </div>
+      Vivens Asset Management Partners integrates legal expertise
+      with financial and tax analysis
+      to design structures that are legally sound,
+      tax-efficient,
+      and aligned with long-term asset protection goals.<br><br>
+
+      Our objective is to ensure that legal risks
+      do not undermine a lifetime of accumulated assets.
+    </p>
   </div>
 </section>
 
 <section>
   <h2>Main Services</h2>
-  <div class="service-grid">
 
-    <div class="service-item">
-      <div class="service-title" onclick="toggleService(this)">
-        1. Gift, Inheritance, Tax Appeals & Tax-Saving Strategies <span>−</span>
-      </div>
-      <div class="service-content">
-        We design optimized gift and inheritance strategies to minimize tax burdens.
-        Services include inheritance and gift tax planning,
-        intra-family asset transfer structuring, tax appeal representation,
-        and tax audit 대응.
-        All strategies comply strictly with current tax laws
-        and are customized to long-term asset preservation.
-      </div>
-    </div>
-
-    <div class="service-item">
-      <div class="service-title" onclick="toggleService(this)">
-        2. Corporate Dissolution & Liquidation <span>+</span>
-      </div>
-      <div class="service-content">
-        We manage the entire corporate dissolution and liquidation process
-        with efficiency and legal accuracy.
-        Services include shareholder resolutions, liquidator appointment,
-        creditor protection procedures, asset distribution,
-        and final tax filings.
-        Post-dissolution asset transfer strategies are also reviewed.
-      </div>
-    </div>
-
-    <div class="service-item">
-      <div class="service-title" onclick="toggleService(this)">
-        3. Integrated Legal Advisory & Business Licensing Support <span>+</span>
-      </div>
-      <div class="service-content">
-        We provide ongoing legal advisory for daily business operations.
-        Services include contract drafting and review,
-        regulatory compliance checks, licensing and permit support,
-        and response to administrative issues.
-        Regular legal reviews help prevent disputes
-        and maintain stable business operations.
-      </div>
-    </div>
-
+  <div class="service">
+    <h3>1. Gift & Inheritance Tax Planning and Tax Audit Response</h3>
+    <p>
+      We design customized gift and inheritance strategies
+      to minimize tax burdens while complying with legal requirements.
+      Services include inheritance tax planning,
+      family asset transfer structuring,
+      response to tax audits,
+      and representation in tax appeals and disputes.
+    </p>
   </div>
+
+  <div class="service">
+    <h3>2. Corporate Dissolution & Liquidation Advisory</h3>
+    <p>
+      We support corporations through the full dissolution
+      and liquidation process,
+      including legal procedures,
+      creditor coordination,
+      asset distribution,
+      and final tax settlement.
+      Risk mitigation and compliance
+      are prioritized at every stage.
+    </p>
+  </div>
+
+  <div class="service">
+    <h3>3. Integrated Legal Advisory & Administrative Law Support</h3>
+    <p>
+      We provide ongoing legal advisory
+      for daily business operations,
+      including contract drafting and review,
+      licensing and permit applications,
+      regulatory compliance,
+      and administrative law matters.
+      Preventive legal review is emphasized
+      to reduce future disputes.
+    </p>
+  </div>
+
 </section>
 
 <footer>
   <div class="contact-info">
     <a href="tel:15331011">Tel. 1533-1011</a> |
-    <a href="mailto:vivensasset@naver.com">E-mail. vivensasset@naver.com</a>
+    <a href="mailto:vivensasset@naver.com">vivensasset@naver.com</a>
   </div>
-  <div class="address">
-    Gyeongsang Branch: 1003, 20, Seoseong-ro, Jung-gu, Daegu, 41933 Korea
-  </div>
-  <div class="business-info">
-    Business Registration No. 803-86-03360
+  <div>
+    Gyeongsang Branch: 1003, 20, Seoseong-ro, Jung-gu, Daegu, Korea
   </div>
 </footer>
-
-<script>
-  function toggleService(element) {
-    const content = element.nextElementSibling;
-    const sign = element.querySelector("span");
-    if (content.style.display === "block") {
-      content.style.display = "none";
-      sign.textContent = "+";
-      sign.style.transform = "rotate(0deg)";
-    } else {
-      content.style.display = "block";
-      sign.textContent = "−";
-      sign.style.transform = "rotate(180deg)";
-    }
-  }
-</script>
 
 </body>
 </html>

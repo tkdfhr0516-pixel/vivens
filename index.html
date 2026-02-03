@@ -11,7 +11,7 @@ body {
   font-family: "Noto Sans KR", Arial, sans-serif;
   background: #ffffff;
   color: #222;
-  line-height: 1.8;
+  line-height: 1.9;
 }
 
 /* NAV */
@@ -53,21 +53,9 @@ nav a.active, nav a:hover {
   text-align: center;
 }
 
-.hero h1 {
-  font-size: 52px;
-  margin-bottom: 20px;
-}
-
-.hero .subtitle {
-  font-size: 24px;
-  margin-bottom: 40px;
-}
-
-.hero .intro {
-  max-width: 900px;
-  margin: 0 auto 45px;
-  font-size: 19px;
-}
+.hero h1 { font-size: 52px; margin-bottom: 20px; }
+.hero .subtitle { font-size: 24px; margin-bottom: 40px; }
+.hero .intro { max-width: 900px; margin: 0 auto 45px; font-size: 19px; }
 
 .cta-buttons {
   display: flex;
@@ -96,7 +84,7 @@ nav a.active, nav a:hover {
   text-decoration: none;
 }
 
-/* COMMON SECTION */
+/* SECTION */
 section {
   max-width: 1150px;
   margin: 0 auto;
@@ -106,59 +94,47 @@ section {
 h2 {
   text-align: center;
   font-size: 38px;
-  margin-bottom: 40px;
-}
-
-/* HIGHLIGHT */
-.highlight-box {
-  background: #f8f9fc;
-  padding: 60px;
-  border-radius: 12px;
-  text-align: center;
-}
-
-.strengths {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 30px;
-  margin-top: 50px;
-}
-
-.strength-item {
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-}
-
-/* COMPANY INTRO */
-.company-intro {
-  max-width: 900px;
-  margin: 0 auto;
-  font-size: 17px;
-  color: #444;
+  margin-bottom: 60px;
 }
 
 /* SUCCESS STORIES */
 .case-study {
-  border-top: 1px solid #eee;
-  padding: 60px 0;
+  border-top: 1px solid #e5e7eb;
+  padding: 70px 0;
 }
 
 .case-study h3 {
-  font-size: 26px;
+  font-size: 28px;
   color: #1e293b;
+  margin-bottom: 25px;
+}
+
+.case-study p {
+  max-width: 950px;
+  margin: 0 auto 18px;
+  font-size: 17px;
+  color: #444;
 }
 
 .related {
-  margin-top: 20px;
+  max-width: 950px;
+  margin: 30px auto 0;
   font-size: 15px;
-  color: #555;
 }
 
 .related span {
-  color: #2c5282;
-  font-weight: 600;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.related a {
+  color: #2563eb;
+  text-decoration: none;
+  margin-right: 12px;
+}
+
+.related a:hover {
+  text-decoration: underline;
 }
 
 /* FOOTER */
@@ -170,7 +146,6 @@ footer {
 }
 
 @media(max-width:768px){
-  .strengths { grid-template-columns: 1fr; }
   .hero h1 { font-size: 38px; }
 }
 </style>
@@ -190,7 +165,7 @@ footer {
   <h1>Vivens Asset Management Partners</h1>
   <div class="subtitle">Building Trust and Expertise for Your Future</div>
   <div class="intro">
-    We focus on long-term stability and risk minimization rather than short-term gains,<br>
+    We focus on long-term stability and risk minimization rather than short-term gains,
     supporting the entire lifecycle of your assets.
   </div>
   <div class="cta-buttons">
@@ -199,70 +174,82 @@ footer {
   </div>
 </div>
 
-<section style="background:#f8f9fc;">
-  <div class="highlight-box">
-    <h2>Your Reliable Partner for Growth</h2>
-    <p>From entrepreneurship to legacy planning, we stand by you at every moment.</p>
-
-    <div class="strengths">
-      <div class="strength-item">One-Stop Integrated Solution</div>
-      <div class="strength-item">Expert Crisis Management</div>
-      <div class="strength-item">Long-term Partnership</div>
-      <div class="strength-item">VVIP Premium Care</div>
-    </div>
-  </div>
-</section>
-
 <section>
-  <h2>Company Overview</h2>
-  <div class="company-intro">
-    <p>Vivens Asset Management Partners is a professional integrated asset management consulting firm headquartered in Daegu.</p>
-    <p>We believe asset planning is not about numbers, but about people, responsibility, and continuity.</p>
-    <p>Our role is to design structures that protect wealth, family harmony, and business sustainability.</p>
-  </div>
-</section>
+<h2>Success Stories</h2>
 
-<!-- SUCCESS STORIES -->
-<section>
-  <h2>Success Stories</h2>
+<div class="case-study">
+<h3>M&A Strategy for Corporate Growth</h3>
+<p>A mid-sized corporation faced structural growth limitations within its existing core business.</p>
+<p>Independent expansion carried high operational and financial risks, prompting the need for a strategic alternative.</p>
+<p>Vivens Asset conducted comprehensive industry analysis and identified acquisition targets aligned with long-term objectives.</p>
+<p>Detailed financial, legal, and operational due diligence was performed to assess hidden risks and synergy potential.</p>
+<p>A transaction structure was designed to minimize tax exposure and financial strain while preserving post-acquisition flexibility.</p>
+<p>The successful acquisition expanded the client’s business portfolio and established a sustainable growth platform.</p>
 
-  <div class="case-study">
-    <h3>M&A Strategy for Corporate Growth</h3>
-    <p>A mid-sized company achieved expansion through strategic acquisition.</p>
-    <div class="related">
-      <span>Related Services:</span> M&A Advisory · Corporate Restructuring · Financial Strategy
-    </div>
-  </div>
+<div class="related">
+<span>Related Services:</span>
+<a href="financial.html">M&A Advisory</a> ·
+<a href="financial.html">Corporate Restructuring</a> ·
+<a href="financial.html">Financial Strategy</a>
+</div>
+</div>
 
-  <div class="case-study">
-    <h3>Gift, Inheritance & Family Business Succession</h3>
-    <p>A family enterprise completed smooth generational transition with minimized tax burden.</p>
-    <div class="related">
-      <span>Related Services:</span> Gift & Inheritance Planning · Family Business Succession · Tax Advisory
-    </div>
-  </div>
+<div class="case-study">
+<h3>Gift, Inheritance & Family Business Succession</h3>
+<p>A long-established family-owned enterprise sought to transfer ownership to the next generation.</p>
+<p>The primary concerns were excessive inheritance tax exposure and potential governance instability.</p>
+<p>Vivens Asset analyzed corporate equity structure, personal assets, and family dynamics in an integrated manner.</p>
+<p>A phased gift and inheritance plan was implemented to distribute tax burden over time.</p>
+<p>Governance and voting structures were redesigned to preserve management control and business continuity.</p>
+<p>The client successfully completed generational transition while maintaining corporate stability.</p>
 
-  <div class="case-study">
-    <h3>Financial Investment Asset Risk Management</h3>
-    <p>Portfolio risk concentration was reduced through strategic restructuring.</p>
-    <div class="related">
-      <span>Related Services:</span> Investment Risk Management · Portfolio Structuring · Wealth Preservation
-    </div>
-  </div>
+<div class="related">
+<span>Related Services:</span>
+<a href="legal.html">Gift & Inheritance Planning</a> ·
+<a href="legal.html">Family Business Succession</a> ·
+<a href="legal.html">Tax & Legal Advisory</a>
+</div>
+</div>
 
-  <div class="case-study">
-    <h3>Real Estate Asset Liquidity Solution</h3>
-    <p>Illiquid real estate assets were converted into flexible financial resources.</p>
-    <div class="related">
-      <span>Related Services:</span> Real Estate Asset Management · Liquidity Structuring · Investment Advisory
-    </div>
-  </div>
+<div class="case-study">
+<h3>Financial Investment Asset Risk Management Solution</h3>
+<p>A high-net-worth individual held a diversified investment portfolio with excessive risk concentration.</p>
+<p>Market volatility exposed weaknesses in short-term, return-focused investment positioning.</p>
+<p>Vivens Asset conducted a full asset-class and correlation-based risk analysis.</p>
+<p>Portfolio rebalancing reduced exposure to volatile instruments and improved structural resilience.</p>
+<p>Investment objectives were redefined with emphasis on capital preservation and long-term stability.</p>
+<p>The client achieved improved asset durability amid ongoing market fluctuations.</p>
+
+<div class="related">
+<span>Related Services:</span>
+<a href="realestate.html">Investment Risk Management</a> ·
+<a href="realestate.html">Portfolio Structuring</a> ·
+<a href="realestate.html">Wealth Preservation Strategy</a>
+</div>
+</div>
+
+<div class="case-study">
+<h3>Real Estate Asset Liquidity Solution</h3>
+<p>A corporate client owned multiple real estate assets with strong valuation but limited liquidity.</p>
+<p>Restricted cash flow hindered new investment and operational flexibility.</p>
+<p>Vivens Asset assessed asset utilization, market conditions, and financing alternatives.</p>
+<p>Multiple liquidity scenarios were evaluated, including partial divestment and structured financing.</p>
+<p>A customized liquidity strategy improved cash flow while preserving long-term asset value.</p>
+<p>Real estate holdings were repositioned as flexible financial resources.</p>
+
+<div class="related">
+<span>Related Services:</span>
+<a href="realestate.html">Real Estate Asset Management</a> ·
+<a href="realestate.html">Asset Liquidity Structuring</a> ·
+<a href="realestate.html">Investment Advisory</a>
+</div>
+</div>
 
 </section>
 
 <footer>
-  <div>📞 1533-1011 | ✉️ vivensasset@naver.com</div>
-  <div>Daegu, Korea</div>
+<div>📞 1533-1011 | ✉️ vivensasset@naver.com</div>
+<div>Daegu, Korea</div>
 </footer>
 
 </body>

@@ -10,133 +10,248 @@
     nav a { color: #e2e8f0; text-decoration: none; font-weight: 600; margin: 0 20px; font-size: 17px; transition: color 0.3s; }
     nav a:hover, nav a.active { color: #93c5fd; }
     nav a.active { border-bottom: 3px solid #93c5fd; padding-bottom: 5px; }
-    .hero { position: relative; background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.68)), url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600"); background-size: cover; background-position: center 35%; background-attachment: fixed; color: #fff; padding: 220px 20px 140px; text-align: center; min-height: 65vh; display: flex; flex-direction: column; justify-content: center; }
-    .hero::before { content: ''; position: absolute; top:0; left:0; right:0; bottom:0; background: inherit; z-index: 1; }
+
+    .hero {
+      position: relative;
+      background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.68)),
+      url("https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=1600");
+      background-size: cover;
+      background-position: center 35%;
+      background-attachment: fixed;
+      color: #fff;
+      padding: 220px 20px 140px;
+      text-align: center;
+      min-height: 65vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .hero::before { content: ''; position: absolute; inset: 0; background: inherit; z-index: 1; }
     .hero > * { position: relative; z-index: 2; }
+
     .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
-    .hero .subtitle { font-size: 22px; margin-bottom: 40px; font-weight: 400; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
-    .hero .intro { max-width: 800px; margin: 0 auto; font-size: 18px; line-height: 1.8; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
+    .hero .subtitle { font-size: 22px; margin-bottom: 30px; font-weight: 400; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
+    .hero .intro { max-width: 850px; margin: 0 auto; font-size: 18px; line-height: 1.9; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
+
     section { max-width: 1150px; margin: 0 auto; padding: 100px 20px 90px; }
-    section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; font-weight: 600; color: #1a1a1a; }
-    .highlight-box { background: #f8f9fc; border-radius: 12px; padding: 40px 30px; margin-bottom: 60px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
-    .highlight-box h2 { font-size: 32px; margin-bottom: 20px; color: #1a1a1a; }
-    .highlight-box p { font-size: 18px; color: #444; margin-bottom: 40px; }
+    section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; font-weight: 600; }
+
+    .highlight-box {
+      background: #f8f9fc;
+      border-radius: 12px;
+      padding: 40px 30px;
+      margin-bottom: 60px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .highlight-box h2 { font-size: 32px; margin-bottom: 20px; }
+    .highlight-box p { font-size: 18px; color: #444; margin-bottom: 40px; max-width: 850px; margin-left: auto; margin-right: auto; }
+
     .benefits { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-    .benefit-item { flex: 1; min-width: 280px; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); transition: transform 0.3s; }
+    .benefit-item {
+      flex: 1;
+      min-width: 280px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
     .benefit-item:hover { transform: translateY(-10px); }
     .benefit-item h3 { font-size: 20px; margin-bottom: 12px; color: #2c5282; }
     .benefit-item p { font-size: 15px; color: #555; }
+
     .service-grid { display: grid; gap: 20px; max-width: 900px; margin: 0 auto; }
-    .service-item { border: 1px solid #e3e6eb; border-radius: 12px; overflow: hidden; background-color: #fff; box-shadow: 0 6px 20px rgba(0,0,0,0.06); transition: all 0.3s ease; }
-    .service-item:hover { box-shadow: 0 12px 32px rgba(0,0,0,0.12); transform: translateY(-2px); }
-    .service-title { cursor: pointer; padding: 24px 28px; font-size: 18px; font-weight: 500; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%); user-select: none; transition: all 0.2s ease; }
-    .service-title:hover { background: linear-gradient(135deg, #eef2f8 0%, #f8f9fc 100%); }
-    .service-title span { font-size: 22px; font-weight: 300; transition: transform 0.2s ease; min-width: 24px; text-align: center; }
-    .service-content { display: none; padding: 0 28px 28px; font-size: 15.5px; color: #444; line-height: 1.75; }
+    .service-item {
+      border: 1px solid #e3e6eb;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+    .service-title {
+      cursor: pointer;
+      padding: 24px 28px;
+      font-size: 18px;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%);
+    }
+    .service-title span { font-size: 22px; font-weight: 300; }
+    .service-content {
+      display: none;
+      padding: 0 28px 28px;
+      font-size: 15.5px;
+      color: #444;
+      line-height: 1.75;
+    }
     .service-item:first-child .service-content { display: block; }
     .service-item:first-child .service-title span { transform: rotate(180deg); }
-    footer { background: #1e293b; color: #e2e8f0; font-size: 14px; padding: 60px 20px 40px; text-align: center; line-height: 1.8; border-top: 1px solid #334155; }
+
+    footer {
+      background: #1e293b;
+      color: #e2e8f0;
+      font-size: 14px;
+      padding: 60px 20px 40px;
+      text-align: center;
+      line-height: 1.8;
+      border-top: 1px solid #334155;
+    }
     .contact-info { margin-bottom: 30px; font-size: 16px; }
-    .contact-info a { color: #93c5fd; text-decoration: none; font-weight: 500; transition: color 0.2s; }
-    .contact-info a:hover { color: #bfdbfe; }
+    .contact-info a { color: #93c5fd; text-decoration: none; font-weight: 500; }
     .address { max-width: 800px; margin: 0 auto 20px; opacity: 0.9; }
     .business-info { font-size: 13px; opacity: 0.85; }
-    @media (max-width: 768px) { nav { padding: 12px 10px; } nav a { margin: 0 10px; font-size: 15px; } .hero { padding: 160px 20px 100px; background-attachment: scroll; } .hero h1 { font-size: 38px; } .hero .subtitle { font-size: 20px; } section h2 { font-size: 30px; } .highlight-box { padding: 30px 20px; } .benefits { flex-direction: column; gap: 20px; } .service-title { padding: 20px 24px; font-size: 17px; } }
   </style>
 </head>
-<body>
-  <nav>
-    <a href="index.html">Company Overview</a>
-    <a href="financial.html">Corporate Finance & Management Consulting</a>
-    <a href="realestate.html" class="active">Comprehensive Real Estate Asset Management</a>
-    <a href="legal.html">Tax, Inheritance & Corporate Legal Services</a>
-    <a href="vvip.html">VVIP Services</a>
-  </nav>
 
-  <div class="hero">
-    <h1>Comprehensive Real Estate Asset Management</h1>
-    <div class="subtitle">Maximizing Value and Stable Operation of Real Estate Assets</div>
-    <div class="intro">
-      We support comprehensive asset allocation and liquidity through financial-linked real estate strategies.<br>
-      From improvement projects to management, sales, leasing, and the entire process consulting.
+<body>
+
+<nav>
+  <a href="index.html">Company Overview</a>
+  <a href="financial.html">Corporate Finance & Management Consulting</a>
+  <a href="realestate.html" class="active">Comprehensive Real Estate Asset Management</a>
+  <a href="legal.html">Tax, Inheritance & Corporate Legal Services</a>
+  <a href="vvip.html">VVIP Services</a>
+</nav>
+
+<div class="hero">
+  <h1>Comprehensive Real Estate Asset Management</h1>
+  <div class="subtitle">Maximizing Value and Stable Operation of Real Estate Assets</div>
+
+  <div class="intro">
+    We provide comprehensive real estate asset management services
+    designed to maximize long-term value while maintaining operational stability.<br><br>
+
+    Our services cover the entire real estate lifecycle — from acquisition,
+    improvement, leasing, and management to disposition and asset liquidity strategies.<br><br>
+
+    By integrating financial planning, tax optimization, and legal risk management,
+    we help clients secure stable cash flow and sustainable asset appreciation.<br><br>
+
+    All strategies are customized to market conditions and aligned with broader
+    asset protection and succession planning objectives.
+  </div>
+</div>
+
+<section style="padding-top: 40px; background: #f8f9fc; padding-bottom: 60px;">
+  <div class="highlight-box">
+    <h2>We Maximize Every Value of Your Real Estate Assets</h2>
+    <p>
+      Real estate is not merely a fixed asset but a dynamic source of cash flow and long-term value.<br>
+      We manage every stage — acquisition, improvement, operation, and exit —
+      with a structured and data-driven approach.<br>
+      Our integrated strategies focus on minimizing market, tax, and legal risks
+      while enhancing asset liquidity and profitability.
+    </p>
+
+    <div class="benefits">
+      <div class="benefit-item">
+        <h3>✔ Asset Value Appreciation</h3>
+        <p>Strategic improvement and timing-based exit planning to maximize returns</p>
+      </div>
+      <div class="benefit-item">
+        <h3>✔ Risk Minimization</h3>
+        <p>Preemptive management of market volatility, tax exposure, and legal risks</p>
+      </div>
+      <div class="benefit-item">
+        <h3>✔ Comprehensive Management</h3>
+        <p>Integrated financial, tax, and legal solutions in one advisory framework</p>
+      </div>
     </div>
   </div>
+</section>
 
-  <section style="padding-top: 40px; background: #f8f9fc; padding-bottom: 60px;">
-    <div class="highlight-box">
-      <h2>We Maximize Every Value of Your Real Estate Assets</h2>
-      <p>From acquisition, development, management, sale to inheritance — professional management of the entire real estate lifecycle.</p>
-      <div class="benefits">
-        <div class="benefit-item">
-          <h3>✔ Asset Value Appreciation</h3>
-          <p>Maximize returns through improvement and liquidity strategies</p>
-        </div>
-        <div class="benefit-item">
-          <h3>✔ Risk Minimization</h3>
-          <p>Pre-management of market volatility, tax, and legal risks</p>
-        </div>
-        <div class="benefit-item">
-          <h3>✔ Comprehensive Management</h3>
-          <p>Integrated financial, tax, and legal solutions</p>
-        </div>
+<section>
+  <h2>Main Services</h2>
+  <div class="service-grid">
+
+    <div class="service-item">
+      <div class="service-title" onclick="toggleService(this)">
+        1. Non-Residential & Residential Improvement Projects <span>−</span>
+      </div>
+      <div class="service-content">
+        We design remodeling, redevelopment, and expansion strategies to enhance the value
+        of residential and commercial properties.
+        Services include project planning, contractor selection, permitting support,
+        and construction cost optimization.
+        Post-completion leasing and sale strategies are also developed to maximize returns.
+        Each project is managed with strict cost and risk control.
       </div>
     </div>
-  </section>
 
-  <section>
-    <h2>Main Services</h2>
-    <div class="service-grid">
-      <div class="service-item">
-        <div class="service-title" onclick="toggleService(this)">
-          1. Non-Residential & Residential Improvement Projects <span>−</span>
-        </div>
-        <div class="service-content">
-          We establish remodeling, redevelopment, and extension strategies to enhance the value of commercial and residential properties.<br>
-          From design/construction company selection, permitting agency, construction cost optimization, to post-completion leasing/sales strategies — we support the entire process to maximize investment returns.<br>
-          We provide customized improvement solutions for all scales, from small individual owners to large projects.
-        </div>
+    <div class="service-item">
+      <div class="service-title" onclick="toggleService(this)">
+        2. Comprehensive Real Estate Asset Management & Liquidity Strategy <span>+</span>
       </div>
-
-      <div class="service-item">
-        <div class="service-title" onclick="toggleService(this)">
-          2. Comprehensive Real Estate Asset Management and Liquidity Strategy <span>+</span>
-        </div>
-        <div class="service-content">
-          Comprehensive diagnosis and optimal management strategies for your real estate portfolio.<br>
-          We realize stable cash flow and asset value appreciation through maximizing rental income, tax optimization, sale timing analysis, and asset liquidity (REITs, funds, collateral loans, etc.).<br>
-          We provide customized long-term management plans and regular reports for both individuals and corporations.
-        </div>
+      <div class="service-content">
+        We provide holistic diagnosis and management strategies for real estate portfolios.
+        Services include rental income optimization, tax-efficient ownership structuring,
+        and exit timing analysis.
+        Asset liquidity is enhanced through refinancing, funds, REITs,
+        and collateral-based financing solutions.
+        Regular performance monitoring ensures transparency and stability.
       </div>
     </div>
-  </section>
 
-  <footer>
-    <div class="contact-info">
-      <a href="tel:15331011">Tel. 1533-1011</a> |
-      <a href="mailto:vivensasset@naver.com">E-mail. vivensasset@naver.com</a>
+    <div class="service-item">
+      <div class="service-title" onclick="toggleService(this)">
+        3. Financial & Real Estate Investment Advisory <span>+</span>
+      </div>
+      <div class="service-content">
+        We advise on real estate-linked investment opportunities aligned with financial goals.
+        Market analysis, risk assessment, and return projections are conducted
+        prior to investment decisions.
+        Both direct and indirect investment structures are evaluated objectively.
+        Capital protection and diversification are emphasized in every recommendation.
+      </div>
     </div>
-    <div class="address">
-      Gyeongsang Branch: 1003, 20, Seoseong-ro, Jung-gu, Daegu, 41933 Korea
-    </div>
-    <div class="business-info">
-      Business Registration No. 803-86-03360
-    </div>
-  </footer>
 
-  <script>
-    function toggleService(element) {
-      const content = element.nextElementSibling;
-      const sign = element.querySelector("span");
-      if (content.style.display === "block") {
-        content.style.display = "none";
-        sign.textContent = "+";
-        sign.style.transform = "rotate(0deg)";
-      } else {
-        content.style.display = "block";
-        sign.textContent = "−";
-        sign.style.transform = "rotate(180deg)";
-      }
+    <div class="service-item">
+      <div class="service-title" onclick="toggleService(this)">
+        4. Real Estate Investment Structuring & Advisory <span>+</span>
+      </div>
+      <div class="service-content">
+        We design optimal ownership and investment structures for real estate assets,
+        including individual, corporate, joint investment, and SPC structures.
+        Tax efficiency, financing feasibility, and exit flexibility are carefully balanced.
+        Legal and financial risks are identified and mitigated in advance.
+        All structures are aligned with long-term asset and succession strategies.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="contact-info">
+    <a href="tel:15331011">Tel. 1533-1011</a> |
+    <a href="mailto:vivensasset@naver.com">E-mail. vivensasset@naver.com</a>
+  </div>
+  <div class="address">
+    Gyeongsang Branch: 1003, 20, Seoseong-ro, Jung-gu, Daegu, 41933 Korea
+  </div>
+  <div class="business-info">
+    Business Registration No. 803-86-03360
+  </div>
+</footer>
+
+<script>
+  function toggleService(element) {
+    const content = element.nextElementSibling;
+    const sign = element.querySelector("span");
+    if (content.style.display === "block") {
+      content.style.display = "none";
+      sign.textContent = "+";
+      sign.style.transform = "rotate(0deg)";
+    } else {
+      content.style.display = "block";
+      sign.textContent = "−";
+      sign.style.transform = "rotate(180deg)";
     }
-  </script>
+  }
+</script>
+
 </body>
 </html>

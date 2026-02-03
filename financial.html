@@ -11,38 +11,96 @@
     nav a:hover, nav a.active { color: #93c5fd; }
     nav a.active { border-bottom: 3px solid #93c5fd; padding-bottom: 5px; }
 
-    .hero { position: relative; background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.68)), url("https://www.shutterstock.com/image-photo/corporate-team-collaborates-office-analyzing-600nw-2668026323.jpg"); background-size: cover; background-position: center 35%; background-attachment: fixed; color: #fff; padding: 220px 20px 140px; text-align: center; min-height: 65vh; display: flex; flex-direction: column; justify-content: center; }
+    .hero {
+      position: relative;
+      background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.68)),
+      url("https://www.shutterstock.com/image-photo/corporate-team-collaborates-office-analyzing-600nw-2668026323.jpg");
+      background-size: cover;
+      background-position: center 35%;
+      background-attachment: fixed;
+      color: #fff;
+      padding: 220px 20px 140px;
+      text-align: center;
+      min-height: 65vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
     .hero::before { content: ''; position: absolute; inset: 0; background: inherit; z-index: 1; }
     .hero > * { position: relative; z-index: 2; }
+
     .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
-    .hero .subtitle { font-size: 22px; margin-bottom: 40px; font-weight: 400; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
-    .hero .intro { max-width: 800px; margin: 0 auto; font-size: 18px; line-height: 1.8; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
+    .hero .subtitle { font-size: 22px; margin-bottom: 30px; font-weight: 400; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
+    .hero .intro { max-width: 850px; margin: 0 auto; font-size: 18px; line-height: 1.9; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
 
     section { max-width: 1150px; margin: 0 auto; padding: 100px 20px 90px; }
-    section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; font-weight: 600; color: #1a1a1a; }
+    section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; font-weight: 600; }
 
-    .highlight-box { background: #f8f9fc; border-radius: 12px; padding: 40px 30px; margin-bottom: 60px; text-align: center; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+    .highlight-box {
+      background: #f8f9fc;
+      border-radius: 12px;
+      padding: 40px 30px;
+      margin-bottom: 60px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
     .highlight-box h2 { font-size: 32px; margin-bottom: 20px; }
-    .highlight-box p { font-size: 18px; color: #444; margin-bottom: 40px; }
+    .highlight-box p { font-size: 18px; color: #444; margin-bottom: 40px; max-width: 850px; margin-left: auto; margin-right: auto; }
 
     .benefits { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
-    .benefit-item { flex: 1; min-width: 280px; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); transition: transform 0.3s; }
+    .benefit-item {
+      flex: 1;
+      min-width: 280px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
     .benefit-item:hover { transform: translateY(-10px); }
     .benefit-item h3 { font-size: 20px; margin-bottom: 12px; color: #2c5282; }
     .benefit-item p { font-size: 15px; color: #555; }
 
     .service-grid { display: grid; gap: 20px; max-width: 900px; margin: 0 auto; }
-    .service-item { border: 1px solid #e3e6eb; border-radius: 12px; overflow: hidden; background-color: #fff; box-shadow: 0 6px 20px rgba(0,0,0,0.06); transition: all 0.3s ease; }
-    .service-item:hover { box-shadow: 0 12px 32px rgba(0,0,0,0.12); transform: translateY(-2px); }
-    .service-title { cursor: pointer; padding: 24px 28px; font-size: 18px; font-weight: 500; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%); }
-    .service-title span { font-size: 22px; }
-    .service-content { display: none; padding: 0 28px 28px; font-size: 15.5px; color: #444; line-height: 1.75; }
+    .service-item {
+      border: 1px solid #e3e6eb;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #fff;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+    .service-title {
+      cursor: pointer;
+      padding: 24px 28px;
+      font-size: 18px;
+      font-weight: 500;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(135deg, #f8f9fc 0%, #ffffff 100%);
+    }
+    .service-title span { font-size: 22px; font-weight: 300; }
+    .service-content {
+      display: none;
+      padding: 0 28px 28px;
+      font-size: 15.5px;
+      color: #444;
+      line-height: 1.75;
+    }
     .service-item:first-child .service-content { display: block; }
     .service-item:first-child .service-title span { transform: rotate(180deg); }
 
-    footer { background: #1e293b; color: #e2e8f0; font-size: 14px; padding: 60px 20px 40px; text-align: center; line-height: 1.8; border-top: 1px solid #334155; }
+    footer {
+      background: #1e293b;
+      color: #e2e8f0;
+      font-size: 14px;
+      padding: 60px 20px 40px;
+      text-align: center;
+      line-height: 1.8;
+      border-top: 1px solid #334155;
+    }
     .contact-info { margin-bottom: 30px; font-size: 16px; }
-    .contact-info a { color: #93c5fd; text-decoration: none; }
+    .contact-info a { color: #93c5fd; text-decoration: none; font-weight: 500; }
     .address { max-width: 800px; margin: 0 auto 20px; opacity: 0.9; }
     .business-info { font-size: 13px; opacity: 0.85; }
   </style>
@@ -61,20 +119,47 @@
 <div class="hero">
   <h1>Corporate Finance & Management Consulting</h1>
   <div class="subtitle">Your Professional Partner for Business Growth and Stability</div>
+
   <div class="intro">
-    From startup to restructuring, M&A, and family business succession,<br>
-    we provide tailored financial strategies and management consulting throughout the entire corporate lifecycle.
+    We provide professional corporate finance and management consulting services
+    tailored to each stage of a company’s lifecycle.<br><br>
+
+    From startups and new corporate establishments to restructuring, M&A,
+    and succession planning, we support critical decision-making processes.<br><br>
+
+    Our consulting focuses on cash flow stability, risk control, and long-term sustainability,
+    rather than temporary financial solutions.<br><br>
+
+    By integrating financial analysis, strategic planning, and execution support,
+    we help business owners protect value and navigate uncertainty with confidence.
   </div>
 </div>
 
 <section style="padding-top: 40px; background: #f8f9fc; padding-bottom: 60px;">
   <div class="highlight-box">
     <h2>We Stand by Your Business at Every Stage</h2>
-    <p>From the beginning of entrepreneurship to overcoming crises and achieving sustained growth — your dedicated finance and management partner is here.</p>
+    <p>
+      From the beginning of entrepreneurship to overcoming financial difficulties
+      and achieving stable growth, we act as a long-term strategic partner.<br>
+      Our approach combines objective analysis with practical execution,
+      ensuring that strategies are not only designed but successfully implemented.<br>
+      We focus on building resilient business structures that endure market volatility
+      and support sustainable corporate growth.
+    </p>
+
     <div class="benefits">
-      <div class="benefit-item"><h3>✔ Minimal Initial Costs</h3><p>Start quickly with reasonable expenses</p></div>
-      <div class="benefit-item"><h3>✔ Rapid Crisis Response</h3><p>Expert support for restructuring and debt reorganization</p></div>
-      <div class="benefit-item"><h3>✔ Long-term Growth Roadmap</h3><p>Comprehensive strategies for M&A, succession, and investment</p></div>
+      <div class="benefit-item">
+        <h3>✔ Minimal Initial Costs</h3>
+        <p>Efficient startup and restructuring strategies with cost-conscious execution</p>
+      </div>
+      <div class="benefit-item">
+        <h3>✔ Rapid Crisis Response</h3>
+        <p>Immediate action plans for restructuring, debt reorganization, and liquidity issues</p>
+      </div>
+      <div class="benefit-item">
+        <h3>✔ Long-term Growth Roadmap</h3>
+        <p>Strategic planning for M&A, succession, and sustainable expansion</p>
+      </div>
     </div>
   </div>
 </section>
@@ -84,90 +169,28 @@
   <div class="service-grid">
 
     <div class="service-item">
-      <div class="service-title" onclick="toggleService(this)">1. Startup and New Corporate Establishment <span>−</span></div>
+      <div class="service-title" onclick="toggleService(this)">
+        1. Startup and New Corporate Establishment <span>−</span>
+      </div>
       <div class="service-content">
-        We provide end-to-end support for entrepreneurs and startups establishing new corporations.
-        Our services include corporate registration, governance design, capital structuring, and early-stage tax and labor setup.
-        We focus on minimizing initial costs while ensuring legal and operational stability.
-        Each structure is designed with scalability and long-term sustainability in mind.
-        Clients receive a clear and practical roadmap from day one.
+        We support businesses from sole proprietorships to large corporations.
+        Services include company registration, corporate conversion, capital structuring,
+        shareholding design, and early-stage tax and labor setup.
+        Our goal is to minimize initial costs while establishing a stable operational foundation.
+        Each structure is customized to long-term growth and exit strategies.
       </div>
     </div>
 
     <div class="service-item">
-      <div class="service-title" onclick="toggleService(this)">2. Management Advisory, Diagnosis, and Business Analysis <span>+</span></div>
-      <div class="service-content">
-        We conduct comprehensive diagnostics covering financial performance, cash flow, cost structure, and competitiveness.
-        Our analysis identifies structural weaknesses and hidden risks within operations.
-        Based on objective data, we propose actionable improvement measures.
-        Mid- to long-term growth strategies are developed to support sustainable expansion.
-        This service is accessible even for small and mid-sized businesses.
+      <div class="service-title" onclick="toggleService(this)">
+        2. Management Advisory, Diagnosis, and Business Analysis <span>+</span>
       </div>
-    </div>
-
-    <div class="service-item">
-      <div class="service-title" onclick="toggleService(this)">3. Corporate Restructuring & Business Normalization Strategy <span>+</span></div>
       <div class="service-content">
-        We assist companies facing financial distress or operational inefficiencies.
-        Services include debt restructuring, capital reorganization, and asset realignment.
-        We collaborate with financial institutions to restore liquidity.
-        Business continuity and recovery are prioritized throughout the process.
-        Our goal is long-term normalization, not temporary relief.
-      </div>
-    </div>
-
-    <div class="service-item">
-      <div class="service-title" onclick="toggleService(this)">4. Mergers & Acquisitions (M&A) Advisory <span>+</span></div>
-      <div class="service-content">
-        We provide full-scope M&A advisory for buyers and sellers.
-        This includes target identification, valuation, due diligence, and deal structuring.
-        Tax and financing risks are carefully managed.
-        Each transaction aligns with the client’s long-term strategic goals.
-        Post-merger integration considerations are addressed from the outset.
-      </div>
-    </div>
-
-    <div class="service-item">
-      <div class="service-title" onclick="toggleService(this)">5. New Business Feasibility & Investment Analysis <span>+</span></div>
-      <div class="service-content">
-        We evaluate the viability of new business initiatives and investments.
-        Market demand, competitive landscape, and financial projections are analyzed.
-        Risks and capital requirements are clearly identified.
-        Objective recommendations support sound decision-making.
-        This service helps prevent costly misjudgments.
-      </div>
-    </div>
-
-    <div class="service-item">
-      <div class="service-title" onclick="toggleService(this)">6. Risk Assessment of Listed & Unlisted Shares <span>+</span></div>
-      <div class="service-content">
-        We assess risks associated with both listed and unlisted equity investments.
-        Financial health, governance, liquidity, and exit risks are evaluated.
-        Special attention is given to unlisted shares with limited transparency.
-        Clients gain clarity before acquisition or disposal.
-        Capital preservation is prioritized.
-      </div>
-    </div>
-
-    <div class="service-item">
-      <div class="service-title" onclick="toggleService(this)">7. Co-Investment Strategy for Acquisition Financing <span>+</span></div>
-      <div class="service-content">
-        We design co-investment structures to support acquisitions and restructuring.
-        Partner roles, investment ratios, and risk-sharing mechanisms are defined.
-        Legal and financial alignment prevents future disputes.
-        Capital efficiency and control balance are carefully managed.
-        This enables complex transactions to proceed smoothly.
-      </div>
-    </div>
-
-    <div class="service-item">
-      <div class="service-title" onclick="toggleService(this)">8. Corporate Dissolution & Liquidation Advisory <span>+</span></div>
-      <div class="service-content">
-        We provide structured advisory for corporate dissolution and liquidation.
-        Legal procedures, asset disposal, debt settlement, and tax optimization are handled.
-        Financial and legal risks are minimized throughout the process.
-        Shareholder and management protection is prioritized.
-        Even in closure, professionalism and responsibility are maintained.
+        We conduct comprehensive management diagnostics for SMEs and growing companies.
+        Financial statements, cash flow, cost structures, and operational efficiency
+        are analyzed to identify risks and improvement opportunities.
+        Based on objective data, we propose actionable short- and mid-term strategies.
+        Our advisory services are designed to be practical and executable.
       </div>
     </div>
 
@@ -194,9 +217,11 @@
     if (content.style.display === "block") {
       content.style.display = "none";
       sign.textContent = "+";
+      sign.style.transform = "rotate(0deg)";
     } else {
       content.style.display = "block";
       sign.textContent = "−";
+      sign.style.transform = "rotate(180deg)";
     }
   }
 </script>

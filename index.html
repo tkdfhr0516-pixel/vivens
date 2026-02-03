@@ -1,124 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Vivens Asset Management Partners - Company Overview</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Vivens Asset Management Partners - Company Overview</title>
 
-  <style>
-    body { margin: 0; font-family: "Noto Sans KR", Arial, sans-serif; background-color: #ffffff; color: #222; line-height: 1.7; }
-    nav { position: fixed; top: 0; left: 0; right: 0; background: #1e293b; border-bottom: 1px solid #334155; z-index: 1000; padding: 15px 20px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-    nav a { color: #e2e8f0; text-decoration: none; font-weight: 600; margin: 0 20px; font-size: 17px; transition: color 0.3s; }
-    nav a:hover, nav a.active { color: #93c5fd; }
-    nav a.active { border-bottom: 3px solid #93c5fd; padding-bottom: 5px; }
+<style>
+body { margin: 0; font-family: "Noto Sans KR", Arial, sans-serif; background-color: #ffffff; color: #222; line-height: 1.8; }
+nav { position: fixed; top: 0; left: 0; right: 0; background: #1e293b; border-bottom: 1px solid #334155; z-index: 1000; padding: 15px 20px; text-align: center; }
+nav a { color: #e2e8f0; text-decoration: none; font-weight: 600; margin: 0 18px; font-size: 16px; }
+nav a.active { color: #93c5fd; border-bottom: 3px solid #93c5fd; padding-bottom: 5px; }
 
-    .hero {
-      position: relative;
-      background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.68)),
-      url("https://www.shutterstock.com/image-photo/two-professional-businessmen-shake-hands-600nw-2685764993.jpg");
-      background-size: cover;
-      background-position: center 35%;
-      background-attachment: fixed;
-      color: #fff;
-      padding: 240px 20px 150px;
-      text-align: center;
-      min-height: 65vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
+.hero {
+  position: relative;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.75)),
+  url("https://www.shutterstock.com/image-photo/two-professional-businessmen-shake-hands-600nw-2685764993.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 240px 20px 150px;
+  text-align: center;
+}
 
-    .hero::before { content: ''; position: absolute; inset: 0; background: inherit; z-index: 1; }
-    .hero > * { position: relative; z-index: 2; }
+.hero h1 { font-size: 52px; margin-bottom: 25px; }
+.hero .subtitle { font-size: 24px; margin-bottom: 30px; }
+.hero .intro { max-width: 900px; margin: 0 auto 50px; font-size: 19px; }
 
-    .hero h1 { font-size: 52px; font-weight: 700; margin-bottom: 20px; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
-    .hero .subtitle { font-size: 24px; margin-bottom: 30px; }
-    .hero .intro { max-width: 900px; margin: 0 auto 40px; font-size: 18px; line-height: 1.85; }
+.cta-buttons { text-align: center; }
+.cta-btn {
+  display: inline-block;
+  background: #3b82f6;
+  color: white;
+  padding: 16px 42px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+}
 
-    .cta-btn {
-      background: #3b82f6;
-      color: #fff;
-      padding: 16px 40px;
-      font-size: 18px;
-      font-weight: 600;
-      border-radius: 8px;
-      text-decoration: none;
-      display: inline-block;
-      margin-bottom: 20px;
-    }
+section { max-width: 1150px; margin: 0 auto; padding: 100px 20px; }
 
-    .hero .phone {
-      font-size: 20px;
-      font-weight: bold;
-      color: #93c5fd;
-    }
+.highlight-box {
+  background: #f8f9fc;
+  border-radius: 12px;
+  padding: 55px;
+  text-align: center;
+}
 
-    section { max-width: 1150px; margin: 0 auto; padding: 100px 20px; }
-    section h2 { text-align: center; font-size: 38px; margin-bottom: 40px; }
+.strengths {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
 
-    .highlight-box {
-      background: #f8f9fc;
-      border-radius: 12px;
-      padding: 50px 40px;
-      margin-bottom: 80px;
-      text-align: center;
-      box-shadow: 0 6px 25px rgba(0,0,0,0.06);
-    }
+.strength-item {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+}
 
-    .highlight-box p {
-      max-width: 850px;
-      margin: 0 auto;
-      font-size: 18px;
-      line-height: 1.9;
-      color: #444;
-    }
+.success-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  margin-top: 50px;
+}
 
-    .strengths {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
-      margin-top: 50px;
-    }
+.success-item {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
 
-    .strength-item {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-    }
-
-    .strength-item h3 { font-size: 22px; margin-bottom: 15px; color: #2c5282; }
-    .strength-item p { font-size: 16px; color: #555; }
-
-    .stories { background: #ffffff; }
-    .story {
-      max-width: 900px;
-      margin: 0 auto 50px;
-      padding-bottom: 40px;
-      border-bottom: 1px solid #e5e7eb;
-    }
-
-    .story h3 { font-size: 24px; margin-bottom: 15px; color: #1a1a1a; }
-    .story p { font-size: 16.5px; line-height: 1.8; color: #444; }
-
-    footer {
-      background: #1e293b;
-      color: #e2e8f0;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    .contact-info a { color: #93c5fd; text-decoration: none; }
-
-    @media (max-width: 992px) {
-      .strengths { grid-template-columns: repeat(2, 1fr); }
-    }
-
-    @media (max-width: 768px) {
-      .strengths { grid-template-columns: 1fr; }
-      .hero h1 { font-size: 38px; }
-    }
-  </style>
+footer {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 60px 20px;
+  text-align: center;
+}
+</style>
 </head>
 
 <body>
@@ -133,113 +96,130 @@
 
 <div class="hero">
   <h1>Vivens Asset Management Partners</h1>
-  <div class="subtitle">Building Trust and Expertise for Your Future</div>
+  <div class="subtitle">Building Long-Term Stability Beyond Short-Term Gains</div>
 
   <div class="intro">
-    Vivens Asset Management Partners is a comprehensive asset management and advisory firm
-    dedicated to long-term stability rather than short-term gains.<br><br>
-    We support the entire lifecycle of assets — from startup, restructuring, and M&A
-    to real estate management, inheritance planning, and succession strategies.<br><br>
-    Our approach integrates financial, legal, tax, and real estate expertise into
-    one coherent structure, allowing clients to identify hidden risks in advance.<br><br>
-    Every strategy is designed to protect accumulated wealth, ensure continuity,
-    and secure generational stability through responsible planning.
+    Vivens Asset Management Partners is an integrated advisory firm specializing in asset protection,
+    corporate finance, real estate management, and legal & tax structuring for high-value assets.<br><br>
+    We do not pursue temporary profits or product-driven consulting.
+    Instead, we focus on identifying structural risks, preserving accumulated wealth,
+    and building strategies that remain stable across generations.<br><br>
+    From the earliest stage of entrepreneurship to restructuring, inheritance,
+    and long-term asset succession, Vivens stands beside clients at every critical decision point.
   </div>
 
-  <a href="financial.html" class="cta-btn">Explore Our Services</a>
-  <div class="phone">📞 1533-1011</div>
+  <div class="cta-buttons">
+    <a href="financial.html" class="cta-btn">Explore Our Services</a>
+  </div>
+<div style="margin-top:30px;font-size:22px;font-weight:600;">
+  <a href="tel:15331011" style="color:#93c5fd;text-decoration:none;">
+    📞 Consultation: 1533-1011
+  </a>
 </div>
 
-<section>
+</div>
+
+<section style="background:#f8f9fc">
   <div class="highlight-box">
-    <h2>Your Reliable Partner for Sustainable Growth</h2>
+    <h2>Your Trusted Partner for Growth, Protection, and Continuity</h2>
     <p>
-      From the first step of entrepreneurship to crisis recovery, asset protection,
-      and legacy planning, Vivens Asset Management Partners stands beside you at every stage.<br><br>
-      We do not focus on one-time consulting or product sales.
-      Instead, we analyze your entire asset structure — business, finance, real estate,
-      and taxation — and design a long-term roadmap that prioritizes stability and continuity.<br><br>
-      Our role is not to react after problems arise, but to prevent risks before they emerge,
-      ensuring that your lifetime of effort is preserved and passed on safely.
+      Asset management is not about numbers alone.
+      It is about responsibility, foresight, and the ability to protect what has been built
+      through years of effort and decisive choices.<br><br>
+      Vivens provides structured solutions that connect finance, law, tax,
+      and real estate into a single, coherent strategy designed for long-term security.
     </p>
 
     <div class="strengths">
       <div class="strength-item">
-        <h3>One-Stop Integrated Solution</h3>
-        <p>Finance, real estate, tax, and legal services seamlessly integrated under one strategy.</p>
+        <h3>Integrated One-Stop Advisory</h3>
+        <p>
+          Financial, legal, tax, and real estate strategies are designed together,
+          eliminating fragmented decision-making and reducing hidden risks.
+        </p>
       </div>
       <div class="strength-item">
-        <h3>Expert Crisis Management</h3>
-        <p>Proven experience in restructuring, M&A, and business recovery scenarios.</p>
+        <h3>Proven Crisis & Restructuring Expertise</h3>
+        <p>
+          Extensive experience in restructuring, M&A, debt reorganization,
+          and business normalization under complex conditions.
+        </p>
       </div>
       <div class="strength-item">
-        <h3>Long-Term Partnership</h3>
-        <p>Ongoing advisory relationships focused on sustainable asset protection.</p>
+        <h3>Long-Term Partnership Philosophy</h3>
+        <p>
+          We focus on sustainable outcomes, supporting execution,
+          monitoring, and continuous strategy refinement.
+        </p>
       </div>
       <div class="strength-item">
-        <h3>VVIP Premium Care</h3>
-        <p>Dedicated private services for high-net-worth and ultra-high-net-worth clients.</p>
+        <h3>VVIP-Level Confidential Care</h3>
+        <p>
+          Dedicated teams and strict confidentiality standards
+          for high-net-worth individuals and families.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="stories">
+<section>
   <h2>Success Stories</h2>
 
-  <div class="story">
-    <h3>M&A Turnaround & Corporate Restructuring</h3>
-    <p>
-      A mid-sized manufacturing company facing liquidity issues and excessive debt
-      successfully completed a strategic M&A restructuring with our support.
-      By redesigning the corporate structure, securing acquisition financing,
-      and negotiating creditor agreements, the company achieved operational normalization
-      and sustainable growth within two years.
-    </p>
-  </div>
+  <div class="success-grid">
 
-  <div class="story">
-    <h3>Inheritance & Family Business Succession</h3>
-    <p>
-      We guided a second-generation family business through a complex inheritance
-      and succession process involving multiple heirs.
-      Through tax-efficient share transfers, governance restructuring,
-      and long-term succession planning, the business avoided internal conflict
-      and preserved both management control and family harmony.
-    </p>
-  </div>
+    <div class="success-item">
+      <h3>M&A Restructuring & Corporate Recovery</h3>
+      <p>
+        A mid-sized manufacturing company faced severe liquidity pressure,
+        excessive debt, and declining operational efficiency.<br><br>
+        Vivens conducted a comprehensive financial diagnosis,
+        redesigned the debt structure, and led negotiations with creditors.<br><br>
+        Through strategic M&A execution and operational restructuring,
+        the company successfully stabilized cash flow,
+        restored profitability, and secured sustainable long-term growth.
+      </p>
+    </div>
 
-  <div class="story">
-    <h3>Financial Investment Risk Management</h3>
-    <p>
-      A high-net-worth individual with concentrated financial assets faced significant
-      market volatility risks.
-      We restructured the investment portfolio, introduced risk-hedging strategies,
-      and aligned asset allocation with long-term cash-flow needs,
-      resulting in stabilized returns and reduced downside exposure.
-    </p>
-  </div>
+    <div class="success-item">
+      <h3>Inheritance & Family Business Succession</h3>
+      <p>
+        A family-owned enterprise faced potential conflicts and excessive inheritance tax exposure.<br><br>
+        Vivens designed a phased succession plan combining tax-efficient ownership transfer,
+        governance structuring, and family agreements.<br><br>
+        The result was a smooth generational transition,
+        minimized tax burden, and preservation of both business continuity and family harmony.
+      </p>
+    </div>
 
-  <div class="story">
-    <h3>Real Estate Asset Liquidity Strategy</h3>
-    <p>
-      For a client holding multiple illiquid real estate assets,
-      we designed a phased liquidity and redevelopment strategy.
-      By optimizing ownership structure, timing asset sales,
-      and utilizing financial instruments, the client achieved both liquidity
-      and long-term value appreciation.
-    </p>
+    <div class="success-item">
+      <h3>Financial Investment Risk Control</h3>
+      <p>
+        A high-net-worth client held a concentrated portfolio exposed to market volatility.<br><br>
+        Vivens restructured the asset allocation,
+        diversified investment vehicles, and implemented downside risk controls.<br><br>
+        The portfolio achieved improved stability,
+        consistent returns, and significantly reduced exposure to systemic risk.
+      </p>
+    </div>
+
+    <div class="success-item">
+      <h3>Real Estate Asset Liquidity Strategy</h3>
+      <p>
+        A client owned multiple illiquid real estate assets with increasing tax and maintenance burdens.<br><br>
+        Vivens implemented a liquidity strategy involving refinancing,
+        selective asset disposition, and reinvestment into structured vehicles.<br><br>
+        This approach improved cash flow, reduced tax exposure,
+        and optimized the overall asset portfolio.
+      </p>
+    </div>
+
   </div>
 </section>
 
 <footer>
-  <div class="contact-info">
-    <a href="tel:15331011">Tel. 1533-1011</a> |
-    <a href="mailto:vivensasset@naver.com">vivensasset@naver.com</a>
-  </div>
-  <div>
-    Gyeongsang Branch: 1003, 20, Seoseong-ro, Jung-gu, Daegu, Korea
-  </div>
+  <p>📞 1533-1011 | vivensasset@naver.com</p>
+  <p>Gyeongsang Branch · Daegu, Korea</p>
 </footer>
 
 </body>

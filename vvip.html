@@ -7,54 +7,97 @@
   <style>
     body { margin: 0; font-family: "Noto Sans KR", Arial, sans-serif; background-color: #ffffff; color: #222; line-height: 1.7; }
     nav { position: fixed; top: 0; left: 0; right: 0; background: #1e293b; border-bottom: 1px solid #334155; z-index: 1000; padding: 15px 20px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
-    nav a { color: #e2e8f0; text-decoration: none; font-weight: 600; margin: 0 20px; font-size: 17px; }
+    nav a { color: #e2e8f0; text-decoration: none; font-weight: 600; margin: 0 20px; font-size: 17px; transition: color 0.3s; }
     nav a:hover, nav a.active { color: #93c5fd; }
     nav a.active { border-bottom: 3px solid #93c5fd; padding-bottom: 5px; }
 
-    .hero { position: relative; background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.68)), url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600"); background-size: cover; background-position: center 35%; background-attachment: fixed; color: #fff; padding: 220px 20px 140px; text-align: center; min-height: 65vh; display: flex; flex-direction: column; justify-content: center; }
+    .hero {
+      position: relative;
+      background: linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.68)),
+      url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600");
+      background-size: cover;
+      background-position: center 35%;
+      background-attachment: fixed;
+      color: #fff;
+      padding: 220px 20px 140px;
+      text-align: center;
+      min-height: 65vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
     .hero::before { content: ''; position: absolute; inset: 0; background: inherit; z-index: 1; }
     .hero > * { position: relative; z-index: 2; }
-    .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; }
-    .hero .subtitle { font-size: 22px; margin-bottom: 40px; }
-    .hero .intro { max-width: 850px; margin: 0 auto; font-size: 18px; line-height: 1.8; }
+
+    .hero h1 { font-size: 48px; font-weight: 700; margin-bottom: 20px; text-shadow: 0 2px 15px rgba(0,0,0,0.8); }
+    .hero .subtitle { font-size: 22px; margin-bottom: 30px; font-weight: 400; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
+    .hero .intro { max-width: 850px; margin: 0 auto; font-size: 18px; line-height: 1.9; text-shadow: 0 1px 8px rgba(0,0,0,0.7); }
 
     section { max-width: 1150px; margin: 0 auto; padding: 100px 20px 90px; }
-    section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; }
+    section h2 { text-align: center; font-size: 36px; margin-bottom: 40px; font-weight: 600; }
 
-    .highlight-box { background: #f8f9fc; border-radius: 12px; padding: 40px 30px; margin-bottom: 60px; text-align: center; }
-    .highlight-box p { font-size: 18px; color: #444; }
-
-    .core-vvip {
-      max-width: 900px;
-      margin: 0 auto 80px;
-      padding: 40px;
+    .highlight-box {
+      background: #f8f9fc;
       border-radius: 12px;
-      background: linear-gradient(135deg, #eef2f8 0%, #ffffff 100%);
-      box-shadow: 0 6px 25px rgba(0,0,0,0.08);
+      padding: 40px 30px;
+      margin-bottom: 60px;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
     }
-    .core-vvip h3 {
-      font-size: 26px;
-      margin-bottom: 20px;
-      color: #1a1a1a;
+    .highlight-box h2 { font-size: 32px; margin-bottom: 20px; }
+    .highlight-box p { font-size: 18px; color: #444; margin-bottom: 40px; max-width: 850px; margin-left: auto; margin-right: auto; }
+
+    .benefits { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .benefit-item {
+      flex: 1;
+      min-width: 280px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+    .benefit-item:hover { transform: translateY(-10px); }
+    .benefit-item h3 { font-size: 20px; margin-bottom: 12px; color: #2c5282; }
+    .benefit-item p { font-size: 15px; color: #555; }
+
+    .vvip-services {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+    .vvip-card {
+      background: #f8f9fc;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: all 0.3s;
       text-align: center;
     }
-    .core-vvip p {
-      font-size: 16px;
-      color: #444;
-      line-height: 1.8;
-      text-align: left;
-    }
-
-    .vvip-services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; }
-    .vvip-card { background: #f8f9fc; border-radius: 12px; padding: 30px; box-shadow: 0 4px 20px rgba(0,0,0,0.06); text-align: center; }
+    .vvip-card:hover { transform: translateY(-8px); box-shadow: 0 12px 32px rgba(0,0,0,0.12); }
     .vvip-card h3 { font-size: 22px; margin-bottom: 15px; }
-    .vvip-card p { font-size: 15px; color: #555; }
+    .vvip-card p { font-size: 15px; color: #555; line-height: 1.6; }
 
-    footer { background: #1e293b; color: #e2e8f0; padding: 60px 20px 40px; text-align: center; }
-    .contact-info a { color: #93c5fd; text-decoration: none; }
+    footer {
+      background: #1e293b;
+      color: #e2e8f0;
+      font-size: 14px;
+      padding: 60px 20px 40px;
+      text-align: center;
+      line-height: 1.8;
+      border-top: 1px solid #334155;
+    }
+    .contact-info { margin-bottom: 30px; font-size: 16px; }
+    .contact-info a { color: #93c5fd; text-decoration: none; font-weight: 500; }
+    .address { max-width: 800px; margin: 0 auto 20px; opacity: 0.9; }
+    .business-info { font-size: 13px; opacity: 0.85; }
 
-    @media (max-width: 1200px) { .vvip-services { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 768px) { .vvip-services { grid-template-columns: 1fr; } }
+    @media (max-width: 1200px) {
+      .vvip-services { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .vvip-services { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 
@@ -70,55 +113,91 @@
 
 <div class="hero">
   <h1>VVIP Services</h1>
-  <div class="subtitle">Absolute Privacy, Security, and Total Asset Protection</div>
+  <div class="subtitle">Premium Tailored Management for Ultra-High-Net-Worth Clients</div>
+
   <div class="intro">
-    Exclusive VVIP services designed for ultra-high-net-worth individuals who require  
-    uncompromising security, confidentiality, and total control over their assets and lives.
+    Our VVIP Services are designed exclusively for ultra-high-net-worth individuals
+    who require absolute confidentiality, discretion, and personalized management.<br><br>
+
+    We provide 1:1 dedicated advisory teams covering asset protection, investment coordination,
+    inheritance planning, and private legal and tax support.<br><br>
+
+    Beyond traditional consulting, our services include strict information control,
+    security coordination, and rapid response in sensitive situations.<br><br>
+
+    Every service is tailored to the client’s assets, lifestyle, and long-term objectives,
+    ensuring complete peace of mind and uncompromising privacy.
   </div>
 </div>
 
-<section>
-  <h2>Core VVIP Service</h2>
+<section style="padding-top: 40px; background: #f8f9fc; padding-bottom: 60px;">
+  <div class="highlight-box">
+    <h2>Experience the Highest Level of Private Asset Management</h2>
+    <p>
+      VVIP clients require more than professional advice — they require trust,
+      discretion, and unwavering responsibility.<br>
+      Our dedicated teams operate under strict confidentiality protocols
+      and provide continuous support across all aspects of asset protection,
+      investment management, and succession planning.<br>
+      Every engagement is managed with absolute privacy and long-term accountability.
+    </p>
 
-  <!-- ✅ 15번 서비스 명확히 반영 -->
-  <div class="core-vvip">
-    <h3>VVIP Security & Confidential Asset Protection Services</h3>
-    <p>
-      We provide comprehensive VVIP security services covering personal safety, asset protection,
-      and absolute confidentiality. Dedicated security professionals, strict NDA-based information
-      control, and isolated asset management systems are applied to protect clients from physical,
-      financial, and reputational risks.
-    </p>
-    <p>
-      Services include personal security coordination, private asset confidentiality management,
-      information exposure prevention, crisis response protocols, and discreet handling of sensitive
-      legal or financial matters. Every process is executed under strict confidentiality standards.
-    </p>
-    <p>
-      This service is designed for clients who require not only asset growth, but complete peace of
-      mind and protection beyond conventional consulting boundaries.
-    </p>
+    <div class="benefits">
+      <div class="benefit-item">
+        <h3>✔ 1:1 Dedicated Team</h3>
+        <p>Exclusive advisory team assigned solely to each VVIP client</p>
+      </div>
+      <div class="benefit-item">
+        <h3>✔ Strict Confidentiality</h3>
+        <p>Advanced information control and security management protocols</p>
+      </div>
+      <div class="benefit-item">
+        <h3>✔ Comprehensive Responsibility</h3>
+        <p>End-to-end oversight of assets, risks, and succession planning</p>
+      </div>
+    </div>
   </div>
+</section>
 
+<section>
   <h2>Exclusive Premium Services for VVIP</h2>
-
   <div class="vvip-services">
+
     <div class="vvip-card">
-      <h3>Tailored Investment Opportunities</h3>
-      <p>Access to exclusive private investments, alternative assets, and global opportunities unavailable to the general market.</p>
+      <h3>Asset Protection & Privacy Management</h3>
+      <p>
+        Comprehensive protection of financial and non-financial assets
+        through strict confidentiality agreements, data isolation,
+        and risk prevention systems.
+      </p>
     </div>
+
     <div class="vvip-card">
-      <h3>Integrated Inheritance & Tax Planning</h3>
-      <p>Comprehensive inheritance, gift, and tax strategies designed for multi-generational asset preservation.</p>
+      <h3>Tailored Investment & Global Opportunities</h3>
+      <p>
+        Access to exclusive investment opportunities including private equity,
+        alternative assets, and global networks unavailable to general clients.
+      </p>
     </div>
+
     <div class="vvip-card">
-      <h3>Family Office–Level Asset Management</h3>
-      <p>Long-term, holistic asset management combining finance, real estate, tax, and legal oversight.</p>
+      <h3>Integrated Inheritance & Succession Planning</h3>
+      <p>
+        Coordinated legal, tax, and financial strategies
+        to ensure smooth intergenerational asset transfer
+        while minimizing tax exposure and family disputes.
+      </p>
     </div>
+
     <div class="vvip-card">
-      <h3>24/7 Dedicated Concierge Support</h3>
-      <p>Immediate response support for lifestyle, travel, medical, legal, and emergency needs.</p>
+      <h3>24/7 Dedicated Support & Crisis Response</h3>
+      <p>
+        Continuous monitoring and immediate response
+        for urgent legal, financial, or personal situations
+        requiring rapid and discreet action.
+      </p>
     </div>
+
   </div>
 </section>
 
@@ -126,6 +205,12 @@
   <div class="contact-info">
     <a href="tel:15331011">Tel. 1533-1011</a> |
     <a href="mailto:vivensasset@naver.com">E-mail. vivensasset@naver.com</a>
+  </div>
+  <div class="address">
+    Gyeongsang Branch: 1003, 20, Seoseong-ro, Jung-gu, Daegu, 41933 Korea
+  </div>
+  <div class="business-info">
+    Business Registration No. 803-86-03360
   </div>
 </footer>
 
